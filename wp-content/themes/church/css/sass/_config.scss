@@ -1,0 +1,160 @@
+$page-color : rgb(255, 255, 255);
+$text-color : rgb(22, 21, 21);
+$nav-color : #FFF;
+$background : #FFF;
+$background-color :  #ffffff;
+$background-hover :  rgb(255, 255, 255);
+$background-opacity : #ffffffde;
+$box-background : #FFF;
+$slide_opacity_color : #4a284cd7;
+$cat_color : #30478C;
+$head : #444;
+$color : #222;
+$hover : #000;
+$border : #391540;
+$border_bottom : #db8289;
+$green_color : #9bbf95;
+$transition : all 0.5s ease-in-out;
+// height config of second cat view
+$height_image : 200px;
+// pretty button with nice hover effect
+%nice_buttons{
+    color : #333;
+    display : inline-block;
+    padding : 7.5px 20px;
+    margin : 0px 5px;
+    text-decoration : none;
+    border-radius : 10px;
+    position : relative;
+    overflow : hidden;
+    transition : $transition;
+    &:hover{
+        color : #333;
+        text-decoration : none;
+        transform : skewY(5deg);
+    }
+    &:before{
+        content : "";
+        width : 10px;
+        height : 40px;
+        transition : $transition;
+        position : absolute;
+        background-color : rgb(255, 255, 255);
+        transform : rotate(-10deg);
+        filter: contrast(200%) brightness(2) blur(8px);
+        left: -15%;
+    }
+    &:hover:before{
+        position : absolute;
+        left : 115% !important;
+        top : 30%;
+    }
+}
+// read more buttons
+%read_more{
+    color : $color;
+    font-weight : bold;
+    font-family : 'lato-regular' , sans-serif;
+    font-size : 14px;
+    display : inline-block;
+    // background : $background-color;
+    padding : 5px 10px;
+    border-radius : 10px;
+    color : #FFF;
+    margin : 0px 0px 0px 5px;
+    &:hover{
+        // background : $background-hover;
+    }
+}
+// headers
+%nice_header{
+    padding : 10px 10px 10px 0px;
+    margin : 20px 0px 10px 0px;
+    display : inline-block;
+    color : #391540;
+    font-family : 'lato-bold' , 'sans-serif';
+    font-weight : bold;
+    img , svg{
+        width : 35px;
+        display : inline-block;
+        margin-right : 5px;
+    }
+    // margin-bottom : 30px;
+    // background : $background-color;
+    // padding : 10px;
+    // margin: 15px;
+    // border-radius : 10px;
+    // //text-shadow:0px 5px 9px #62633c;
+    // &:hover{
+    //     background : $background-hover;
+    // }
+}
+
+// fonts
+@font-face{
+    font-family: 'ptf-55f';
+    src:url('../fonts/article_font/PTF55F.ttf');
+}
+@font-face{
+    font-family: 'lato-regular';
+    src:url('../fonts/Lato/Lato-Regular.ttf');
+}
+@font-face{
+    font-family: 'lato-bold';
+    src:url('../fonts/Lato/Lato-Bold.ttf');
+}
+*{
+    font-family: 'lato-regular', sans-serif;
+    font-weight: normal;
+    margin: 0px;
+    padding: 0px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color : $text-color;
+}
+
+.border_bottom_gradint{
+    background : $border_bottom;
+    width : 100%;
+    height : 5px;
+    margin-top : 15px;
+}
+
+// tooltip 
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+  
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}

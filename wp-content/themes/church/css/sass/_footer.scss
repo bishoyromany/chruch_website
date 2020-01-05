@@ -1,0 +1,261 @@
+#chat{
+    bottom : 0px;
+    right : 15px;
+    position: fixed;
+    z-index : 100000;
+    .chat_box{
+        transition: $transition;
+        background-color : $background-color;
+        width : 0px;
+        height : 0px;
+        max-width : calc(100vw - 15px);
+        &.show_chat_box{
+            height : 400px;
+            width : 400px;
+        }
+    }
+
+    .chat_picker{
+        padding : 15px 20px;
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+        background-color : #391540;
+        display : flex;
+        width : 250px;
+        align-items: center;
+        transition : $transition;
+        max-width : calc(100vw - 15px);
+        cursor: pointer;
+        .chat_icon{
+            flex : 2;
+        }
+        .text{
+            margin-left : 10px;
+            flex : 8;
+            color : #FFF;
+            font-size : 1.3em;
+        }
+        .chat_arrow{
+            flex : 1;
+            transition:  $transition;
+        }
+        &.shown_chat_box{
+            width: 400px;
+            .text{
+                flex : 15;
+            }
+            .chat_arrow{
+                transform : rotate(180deg);
+            }
+        }
+    }
+}
+
+// back to up 
+#backToTop{
+    width : 50px;
+    height : 50px;
+    padding : 10px;
+    border-radius : 50%;
+    background-color : $background-color;
+    position : fixed;
+    bottom : -80px;
+    z-index : 1000;
+    left : 10px;
+    cursor: pointer;
+    transition :$transition;
+    &.show_back_to_top{
+        bottom : 40px !important;
+    }
+    img{
+        width : 100%;
+    }
+}
+
+// footer style
+.footer{
+    background: #391540;
+    width : 100%;
+    padding : 20px 10px 50px;
+    z-index: 100000;
+    border-top : $border_bottom;
+    position: relative;
+    z-index : 2;
+    .footer_logo{
+        text-align : center;
+        h3{
+            margin : 0px;
+            color : #FFF;
+            text-transform: uppercase;
+        }
+        .logo{
+            width: 70%;
+            margin: 20px auto;
+        }
+        .social{
+            text-align : center;
+            padding : 5px 10px;
+            background-color :#FFF;
+            border-radius : 20px;
+            display : inline-block;
+            margin-bottom : 10px;
+            a{
+                display : inline-block;
+                margin : 0px 2.5px;
+                vertical-align: middle;
+            }
+            .facebook_1 , .youtube_1 , .instagram_1 , .patreon_1 , .whats_app_1{
+                display : none;
+            }
+            a{
+                margin-left : 10px;
+                &:hover .facebook_1 , &:hover .youtube_1 , &:hover .instagram_1 , 
+                &:hover .patreon_1 , &:hover .whats_app_1{
+                    display : block !important;
+                }
+                &:hover .facebook_0 , &:hover .youtube_0 , &:hover .instagram_0 , 
+                &:hover .patreon_0 , &:hover .whats_app_0{
+                    display : none !important;
+                }
+                img{
+                    width : 25px;
+                }
+            }
+            .facebook_1 , .facebook_0 ,.instagram_1 , .instagram_0 , .youtube_1 , .youtube_0{
+                img{
+                    width : 25px;
+                }
+            }
+
+        }
+
+        .email{
+            margin-top : 10px;
+            a{
+                color : #FFF;
+                text-decoration : none;
+                text-transform: uppercase;
+                font-size : 1.1em;
+            }
+        }
+    }
+
+    .week_by_week_footer{
+        text-align : center;
+        height: 193px;
+        display: inline-block;
+        width : 100%;
+        p , h2{
+            color : #FFF;
+            margin : 0px;
+            text-decoration : none;
+        }
+        .img-responsive{
+            margin : 0px auto;
+            width: 115px !important;
+        }
+    }
+
+    .copy_rights , .copy_rights_phone{
+        margin-top : 15px;
+        color : #FFF;
+        font-size : 1em;
+        text-transform: uppercase;
+        text-align : center;
+    }
+
+    .copy_rights_phone{
+        display : none;
+    }
+
+    .links{
+        text-align : center;
+        ul {
+            li{
+                display : inline-block;
+                margin : 0px 10px 10px;
+                a{
+                    color : #FFF;
+                    text-transform: uppercase;
+                    text-decoration : none;
+                }
+            }
+        }
+    }
+
+    .contact{
+        form{
+            .clas1{
+                padding-right : 5px;
+            }
+            .clas2{
+                padding-left : 5px;
+            }
+            textarea{
+                width : 100%;
+                height : 150px;
+                resize : none;
+                padding : 7.5px 10px;
+                border-radius : 10px;
+                border : none;
+                outline : 0;
+            }
+    
+            input{
+                margin : 5px 0px;
+                width : 100%;
+                padding : 7.5px 10px;
+                border-radius : 10px;
+                border : none;
+                outline : 0;
+                &:nth-of-type(1){
+                    margin : 0px 0px 5px !important;
+                }
+            }
+
+            .submit{
+                background-color : #f2b6bb;
+                color : #391540;
+            }
+        }
+
+    }
+}
+
+
+
+
+/*
+** Mobile Design
+*/
+@media (max-width: 991px) { 
+    .footer{
+        padding : 20px 10px 80px;
+        .footer_logo{
+            margin-bottom : 10px;
+            .logo{
+                width : 100%;
+            }
+        }
+    
+        .copy_rights{
+            display : none;
+        }
+
+        .copy_rights_phone{
+            display : block !important;
+            text-align : center;
+        }
+
+        .contact{
+            form{
+                .clas1{
+                    padding : 0px 15px !important;
+                }
+                .clas2{
+                    padding : 0px 15px !important;
+                }
+            }
+        }
+    }
+}

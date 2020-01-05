@@ -1,0 +1,24 @@
+.breadcrumb-container{
+    padding : 10px;
+    border-radius : 10px 0px;
+    .breadcrumb{
+        margin-bottom : 0px;
+        padding : 0px;
+        background-color : transparent;
+        .fa-arrow-right{
+            margin-bottom : 15px;
+        }
+        li{
+            @extend %nice_buttons;
+            background-color : rgb(40, 145, 231);
+            color : #FFF;
+            padding : 10px 20px;
+            &:hover{
+                background-color : rgb(79, 165, 235);
+            }
+            a{
+                color : #FFF;
+            }
+        }
+    }
+}

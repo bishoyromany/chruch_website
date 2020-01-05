@@ -1,0 +1,51 @@
+@import "_config"; // main file config
+
+@import "_header"; // import the comments file
+
+@import "_author"; // import the author section
+
+@import "_homepage"; // import the comments file
+
+@import "_categories"; // import categories file
+
+@import "_single"; // import the single post file // must be in the end
+
+@import "_search"; // import the search 
+
+@import "_comments"; // import comments file
+
+@import "_widget";     // import the widget file 
+
+@import "_slick-arrow"; // import slick shape file
+
+@import "_breadcrumb";     // import the bradcramp file 
+
+@import "_faq";     // import the faq file 
+
+@import "_footer";     // import the footer file 
+
+@import "_404";     // import the footer file 
+/* 
+** main rules
+*/
+body{
+    background-color : $page-color;
+    color : $color;
+    min-height : 200vh;
+    overflow-x : hidden;
+}
+h1 , h2 , h3 , h4 , h5{
+    // font-family: 'pretty-head' , sans-serif;
+    // a , span{
+    //     font-family: 'pretty-head' , sans-serif;
+    // }
+}
+.dotted{
+    border-top : 6px dashed $border;
+}
+.disabled{
+    cursor: not-allowed;
+}
+.fix {
+    clear : both;
+}

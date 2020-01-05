@@ -1,0 +1,626 @@
+/*
+** @Author : Bishoy Romany
+** @Page : single.php
+** @version: 1.0.0
+** This style only for signle post page
+*/
+
+// single post header
+.single-post-header{
+    & > div{
+        height : 400px;
+        width : 100%;
+        position : relative;
+        display : flex;
+        flex-direction: row;
+        align-items : center;
+        text-align : center;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        .all_container{
+            flex : 1;
+            z-index : 1;
+        }
+        h2{
+            color : #FFF;
+            font-weight : bold;
+            font-family : lato-bold , 'sans-serif';
+            margin : 0px;
+            padding : 0px;
+        }
+        .breadcrumb-container-header{
+            .breadcrumb{
+                margin : 0px;
+                background-color : transparent;
+                li{
+                    color : rgb(255, 255, 255);
+                    a{
+                        color : rgb(255, 255, 255);
+                    }
+                } 
+                svg{
+                    width: 20px;
+                    vertical-align: middle;
+                    margin: 0px 5px;
+                    path{
+                        fill : #FFF !important;
+                    }
+                }
+            }
+        }
+        .overly{
+            width : 100%;
+            height : 100%;
+            position : absolute;
+            background-color : rgba(0, 0, 0, 0.548);
+            z-index : 0;
+            top : 0px;
+            left : 0px;
+        }
+    }
+}
+
+#singlePost{
+    // single post page stlye 
+    .single-post{
+        width : auto ;
+        overflow : visible;
+        position : relative;
+        margin-top : 30px;
+        background-color : $box-background;
+        border : 1px solid #CCC;
+        // post container
+        .data{
+            padding : 10px 20px 20px 30px;
+        }
+        
+        // edit post
+        .post-edit-link{
+            // position : absolute;
+            float:right;
+            top : -33px;
+            right : 10px;
+            color : #FFF;
+            font-size : 17px;
+            padding : 5px 20px;
+            border-bottom-left-radius: 10px;
+            background-color : $background-color;
+            text-decoration: none;
+            transition : $transition;
+            &:hover{
+                text-decoration: none;
+                background-color : #391540;
+            }
+            svg{
+                color : #FFF;
+            }
+        }
+
+        // post title
+        .post-title{
+            font-size : 40px;
+            margin : 0px 0px 15px;
+            font-weight : bold;
+            font-family: lato-bold , 'sans-serif';
+            a{
+                text-decoration: none;
+                color : #391540;
+            }
+        }
+
+        // post under head options
+        .post-author , .post-date , .post-comments{
+            margin-left : 15px;
+            margin-bottom : 15px;
+            display : inline-block;
+            a{
+                color : #333;
+            }
+        }
+        .post-author{
+            margin-left : 0px !important;
+        }
+        .post-date , .post-comments{
+            margin-left : 7.5px;
+        }
+
+        // shares
+        .share-container{
+            position: relative;
+            margin-left : 10px;
+            .fb-share-button{
+                vertical-align: middle;
+            }
+            .twitter-share-button{
+                background-color : rgb(57, 160, 201);
+                display : inline-block;
+                color : #FFF;
+                padding : 4px 10px;
+                border-radius : 5px;
+                text-decoration : none;
+                &:hover{
+                    background-color : skyblue;
+                }
+                img{
+                    display: inline-block;
+                    height: 15px;
+                    vertical-align: top;
+                }
+            }
+        }
+        .bottom-shares{
+            text-align : center;
+            position: relative;
+            .twitter-share-button{
+                background-color : rgb(57, 160, 201);
+                display: inline-block;
+                color: #FFF;
+                vertical-align: bottom;
+                font-size: 13px;
+                // top: -2px;
+                // left: 78%;
+                padding: 5px 10px;
+                border-radius: 5px;
+                text-decoration: none;
+                // position: absolute;
+                margin-bottom: 0.5px;
+                &:hover{
+                    background-color : skyblue;
+                }
+            }
+
+            img{
+                display: inline-block;
+                height: 15px;
+                vertical-align: top;
+            }
+
+        }
+
+        .copy{
+            margin : 10px;
+            text-align : center;
+            input{
+                padding : 5px;
+            }
+            button{
+                padding : 7.5px;
+                color : #FFF;
+                background-color : #391540;
+                border : none;
+            }
+        }
+        // first image
+        .img-container{
+            max-height : 450px;
+            overflow : hidden;
+            text-align : center;
+            height : auto;
+            // margin : 20px auto;
+            img{
+                width : 100%;
+                max-height : 450px;
+                transition : $transition;
+                &:hover{
+                    transform : scale(1.1);
+                }
+            }
+        }
+
+        // the post content
+        .the-post{
+            // table of wp
+            .wp-block-table{
+                background-color : #DDD;
+                background-color : #888;
+                text-align : center;
+                max-width : 100%;
+                overflow : auto;
+                display : inline-block;
+                // table header
+                thead{
+                    background-color : #444;
+                    tr{
+                        th{
+                            padding : 5px 10px;
+                            color : #DDD;
+                            font-size : 17px;
+                            border : 1px solid #000;
+                        }
+                    }
+                }
+                // table body style
+                tbody{
+                    tr{
+                        transition : $transition;
+                        background-color : #999;
+                        td{
+                            padding : 10px 20px;
+                            font-size : 18px;
+                            border : 1px solid #000;
+                        }
+                        &:hover{
+                            background-color : #FFF;
+                        }
+                    }
+                    tr:nth-of-type(even){
+                        background-color : #DDD;
+                        &:hover{
+                            background-color : #FFF;
+                        }
+                    }
+                }
+            }
+            //wordpress separetor
+            .wp-block-separator{
+                background-color : rgba(51, 51, 51, 0.507);
+                padding : 2px;
+                margin : 20px 0px;
+            }
+            // all p elements
+            p{
+                font-size : 18px;
+                color : #000;
+                padding : 0px;
+                margin-bottom: 15px;
+                font-family: lato-regular,arial,sans-serif;
+            }
+            // all links
+            a{
+                font-weight : bold;
+                font-family: lato-bold;
+                text-decoration : none;
+            }
+            // all h3 elements
+            h3 , h2 , h4 , h5 , h6{
+                letter-spacing: .06em;
+                margin: 30px 0 20px!important;
+                margin-bottom: 20px!important;
+                margin-top: 30px!important;
+                text-transform: captitalize;
+
+                // margin: 10px 0px;
+                font-family : lato-bold , 'sans-serif';
+                // border-left: 2px solid #00000078;
+                // padding: 10px 0px 10px 0px;
+                // border-radius: 10px;
+                // &:before{
+                //     content : "\f005";
+                //     margin-right : 5px;
+                //     font-family : 'Font Awesome 5 Free';
+                // }
+            }
+            // all ul and ol elements
+            ul , ol{
+                margin-left : 20px;
+                margin-bottom : 15px;
+                display: block;
+                min-width: 90%;
+                padding: 0px;
+                li{
+                    padding: 10px 20px 10px 10px;
+                    font-size : 18px;
+                    color : #000;
+                    padding : 0px;
+                    // margin-bottom: 15px;
+                    font-family: lato-regular,arial,sans-serif;
+                    // border-left: 1px solid black;
+                    // border-bottom: 1px solid black;
+                    // border-top: 1px solid black;
+                }
+            }
+            // all images style
+            figure{
+                max-width : 100%;
+                width: 100%;
+                border-radius : 10px;
+                overflow : hidden;
+                display : block;
+                margin : 5px 0px auto;
+                text-align : center;
+                a{
+                    width : 100%;
+                }
+                img{
+                    transition : $transition;
+                    z-index : -1;
+                    width : 100%;
+                    &:hover{
+                        transform : scale(1.1);
+                    }
+                }
+                figcaption{
+                    background-color : rgba(0, 0, 0, 0.548);
+                    color : #FFF;
+                    padding : 10px;
+                    font-size : 18px;
+                    margin : 0px;
+                    z-index : 2;
+                }
+            }
+
+            // gallery of wp
+            .wp-block-gallery{
+                min-width: 100%;
+                padding: 0px;
+                margin : 0px 0px 30px 0px;
+                border-left : none;
+                display : block;
+                border : 1px solid #000;
+                li{
+                    margin : 5px auto;
+                    overflow : hidden;
+                    padding : 0px 5px !important;
+                    border : none;
+                    figure{
+                        border : 1px solid #333;
+                    }
+                    &:before{
+                        display : none;
+                    }
+                }
+                // slick options
+                .slick-dots{
+                    bottom : -40px;
+                    li{
+                        background : $background-color;
+                        margin : 0px 5px;
+                        border : none;
+                    }
+                    .slick-active{
+                        background-color : #000;
+                    }
+                }
+            }
+
+        }
+
+        // category
+        .post-coategories{
+            svg{
+                margin-bottom : 10px;
+            }
+            a{
+                @extend %nice_buttons;
+                background : $background-color;
+            }
+        }
+
+        // tags
+        .post-tags{
+            // have tags
+            a{
+                @extend %nice_buttons;
+                color : #FFF !important;
+                background-color : #391540;
+            }
+            // don't have tags
+            .post-no-tags{
+                color : red;
+                font-weight: 700;
+                font-size : 20px;
+            }
+        }
+    }
+
+    // single post for phones
+    @media only screen and (max-width : 991px){
+        // single post page stlye 
+        .single-post{
+            padding : 5px;
+            // post title
+            .post-title{
+                font-size : 25px;
+            }
+
+            // the post content
+            .the-post{
+                // table of wp
+                .wp-block-table{
+                    // table header
+                    thead{
+                        tr{
+                            th{
+                                padding : 5px;
+                                font-size : 16px;
+                            }
+                        }
+                    }
+                    // table body style
+                    tbody{
+                        tr{
+                            td{
+                                padding : 5px;
+                                font-size : 16px;
+                            }
+                        }
+                    }
+                }
+                // all p elements
+                p{
+                    font-size : 17.5px;
+                }
+                // all h3 elements
+                h3 , h2 , h4 , h5 , h6{
+                    padding: 10px 0px 10px 5px;
+                }
+            }
+        }
+    }
+
+    // next and previous posts
+    .next-prev-posts-single{
+        h4{
+            margin : 20px 0px 10px;
+            font-weight : bold;
+            font-family : lato-bold , 'arial' , 'sana-serif';
+            color : #391540; 
+        }
+        ol{
+            margin-left : 20px;
+            margin-bottom : 15px;
+            display: block;
+            min-width: 90%;
+            padding: 0px;
+            margin-top : 10px;
+            li{
+                text-align : left;
+                padding: 10px 20px 10px 10px;
+                font-size : 18px;
+                padding : 0px;
+                // margin-bottom: 15px;
+                font-family: lato-regular,arial,sans-serif;
+                // border-left: 1px solid black;
+                // border-bottom: 1px solid black;
+                // border-top: 1px solid black;
+                a{
+                    text-decoration : none;
+                    margin-left: 5px;
+                    font-family: lato-regular,arial,sans-serif;
+                }
+            }
+        }
+        // padding : 10px;
+        // posts pagination
+        // .posts-pagination{
+        //     display : block;
+        //     .next-link , .prev-link , span{
+        //         max-width : 40%;
+        //         background-color : #f2b6bb;        
+        //         @extend %nice_buttons;
+        //         color : #391540 !important;
+        //         &:hover{
+        //             background-color : #db8289;
+        //         }
+        //     }
+        //     .prev-link , .prev{
+        //         float : left;
+        //     }
+        //     .next-link , .next{
+        //         float : right;
+        //     }
+        //     .prev , .next{
+        //         opacity: 0.7;
+        //         cursor: not-allowed;
+        //     }
+        //     .prev , .next , .prev-link , .next-link{
+        //         a{
+        //             color : #391540 !important;
+        //             text-decoration : none; 
+        //             &:hover{
+        //                 text-decoration : none;
+        //             }
+        //         }
+        //     }
+        // }
+    }
+
+    // random posts excerpt
+    .recommended-posts-container{
+        margin-top : 10px;
+        // random posts
+        .rand-head{ // random posts header
+            @extend %nice_header;
+            margin : 20px 0px 10px;
+            border-radius : 10px 10px 0px 0px;
+        }
+    }
+
+    // author meta
+    .author-meta{
+        padding : 10px;
+        background-color : $box-background;
+        border-radius : 10px; 
+        // posts count and author image  
+        .author-img{
+            display: block;
+            width : 100%;
+            margin : 0px auto;
+            img{
+                width : 100%;
+            }
+        }
+        .author-posts-count{
+            margin : 5px auto;
+            @extend %nice_header;
+        }
+        // describtion and name
+        .desc-name{
+            margin-top: 10px;
+            border-radius: 0px 10px 10px 0px;
+            background: $background-color;
+            color : $color;
+            padding : 10px;
+            .first-last-name{
+                font-family : 'pretty-head' , sans-serif;
+                font-weight: bold;
+                color : $color;
+                display : inline-block;
+                margin: 5px;
+                font-size : 22px;
+            }
+            .description{
+                font-size: 20px;
+            }
+        }
+
+    }
+}
+
+
+@media screen and (max-width : 991px){
+    .single-post-header{
+        & > div{
+            padding : 0px 10px;
+        }
+    }
+    #singlePost{
+        padding : 0px;
+        .single-post{
+            padding : 0px;
+            .data{
+                padding: 10px 10px 20px 10px;
+            }
+        }
+
+
+        // shares
+        .share-container{
+            margin-left : 0px !important;
+            margin-top : 0px;
+            margin-bottom : 10px;
+            .fb-share-button{
+                vertical-align: middle;
+            }
+            .twitter-share-button{
+                font-size: 10px;
+                vertical-align: top;
+                margin-left: -8px;
+                &:hover{
+                    background-color : skyblue;
+                }
+                img{
+                    height: 10px;
+                    vertical-align: middle;
+                }
+            }
+        }
+        .bottom-shares{
+            .twitter-share-button{
+                font-size: 10px !important;
+                margin-left: -8px;
+                vertical-align: top !important;
+            }
+
+            img{
+                height: 10px !important;
+                vertical-align: top !important;
+            }
+
+        }
+
+
+    }
+
+
+}
