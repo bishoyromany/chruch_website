@@ -42,7 +42,7 @@
   padding: 10px 10px 10px 0px;
   margin: 20px 0px 10px 0px;
   display: inline-block;
-  color: #391540;
+  color: #80d3f8;
   font-family: 'lato-bold' , 'sans-serif';
   font-weight: bold; }
   .author-page .author-posts .posts-head img, .author-page .author-comments-section h2 img, .cat-container .recommend-head img, .cat-container .cat-title img, #singlePost .recommended-posts-container .rand-head img, #singlePost .author-meta .author-posts-count img, .comments-section .comemnts-title img, .author-page .author-posts .posts-head svg, .author-page .author-comments-section h2 svg, .cat-container .recommend-head svg, .cat-container .cat-title svg, #singlePost .recommended-posts-container .rand-head svg, #singlePost .author-meta .author-posts-count svg, .comments-section .comemnts-title svg {
@@ -131,6 +131,8 @@
           display: flex; }
       #navbar .upper .logo_social .live_streaming_container {
         width: 100%; }
+        #navbar .upper .logo_social .live_streaming_container a {
+          float: right; }
         #navbar .upper .logo_social .live_streaming_container .live_streaming {
           max-height: 71px;
           float: right; }
@@ -220,13 +222,13 @@
             border-radius: 20px; }
             #navbar .upper .logo_social .search_form_pc form button svg {
               width: 17px;
-              fill: #391540; }
+              fill: #80d3f8; }
               #navbar .upper .logo_social .search_form_pc form button svg path {
-                color: #391540; }
+                color: #80d3f8; }
   #navbar .toggle_nav_links {
     display: none; }
   #navbar a {
-    color: #FFF !important;
+    color: #161515 !important;
     text-decoration: none;
     display: inline-block; }
     #navbar a:hover {
@@ -251,6 +253,8 @@
       top: 0px; }
     #navbar .nav_links .menu-navbar-menu-container {
       display: inline-block; }
+    #navbar .nav_links a {
+      font-weight: bold; }
   #navbar .social_links_pc, #navbar .social_links_phone {
     float: right;
     display: inline-block;
@@ -265,6 +269,16 @@
         display: none !important; }
       #navbar .social_links_pc a img, #navbar .social_links_phone a img {
         width: 25px; }
+  #navbar .news_marquee {
+    background-color: #dbdbd9;
+    padding: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    font-family: "lato-regular", sans-serif; }
+    #navbar .news_marquee * {
+      font-weight: bold;
+      margin: 0px;
+      padding: 0px; }
   #navbar .navbar_cats {
     list-style: none;
     margin: 0px;
@@ -279,9 +293,9 @@
         font-size: 1.1em;
         text-decoration: none; }
         #navbar .navbar_cats > li > a:hover {
-          color: #391540 !important; }
+          color: #1f289d !important; }
         #navbar .navbar_cats > li > a.active_dropdown_nav_a {
-          color: #391540 !important; }
+          color: #1f289d !important; }
           #navbar .navbar_cats > li > a.active_dropdown_nav_a:before {
             content: '';
             border-style: solid;
@@ -313,7 +327,7 @@
             font-size: 1.2em;
             color: #161515 !important; }
           #navbar .navbar_cats > li > ul > li ul {
-            border-top: 1px solid #391540;
+            border-top: 1px solid #80d3f8;
             list-style: none; }
             #navbar .navbar_cats > li > ul > li ul li {
               padding: 5px 0px 5px; }
@@ -389,7 +403,7 @@
         color: #161515 !important;
         display: block;
         width: 100%;
-        border-bottom: 1px solid #391540; }
+        border-bottom: 1px solid #80d3f8; }
         #navbar .navbar_cats > li > a:hover {
           background-color: #ffffff; }
         #navbar .navbar_cats > li > a.active_dropdown_nav_a {
@@ -419,7 +433,7 @@
             color: #161515 !important;
             width: 100%; }
           #navbar .navbar_cats > li > ul > li ul {
-            border-top: 1px solid #391540;
+            border-top: 1px solid #80d3f8;
             list-style: none;
             padding-left: 10px;
             width: 100%; }
@@ -462,7 +476,14 @@
   .navbar_container_fixed_zero {
     width: 100%;
     padding: 0px;
-    margin: 0px; } }
+    margin: 0px; }
+
+  #pageContainer {
+    width: 90%;
+    margin: 0px auto;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2); } }
 /*
 ** @Author : Bishoy Romany
 ** @Page : author.php
@@ -498,9 +519,9 @@
     text-align: left;
     background-color: #FFF;
     padding: 20px 20px 0px;
-    border: 1px solid #391540;
+    border: 1px solid #80d3f8;
     margin-bottom: 30px;
-    border: #391540;
+    border: #80d3f8;
     border-radius: 10px;
     min-height: 570px;
     max-height: 570px;
@@ -831,7 +852,7 @@
       border-style: solid;
       width: 150%; }
     .cat-container .recommend-head a, .cat-container .cat-title a {
-      color: #391540;
+      color: #80d3f8;
       text-decoration: none; }
       .cat-container .recommend-head a img, .cat-container .cat-title a img {
         width: 30px; }
@@ -1847,14 +1868,14 @@
     color: #391540;
     margin-bottom: 20px; }
     .cutom-sidebar .box h3 {
-      color: #391540;
+      color: #80d3f8;
       position: relative;
       font-size: 20px;
       padding-bottom: 5px; }
       .cutom-sidebar .box h3 span {
         display: inline-block;
         padding: 5px;
-        color: #391540;
+        color: #80d3f8;
         border-bottom: 1px solid #DDD;
         color: #1a1a1a;
         text-transform: uppercase;
@@ -2046,7 +2067,7 @@
       margin-bottom: 0px; }
   .cutom-sidebar .custom-cats .cats-container {
     background-color: #FFF;
-    color: #391540;
+    color: #80d3f8;
     padding: 0px 0px 10px 10px;
     margin-top: 5px;
     border-bottom-left-radius: 10px;
@@ -2056,7 +2077,7 @@
       display: block;
       padding: 5px 5px 0px 10px; }
       .cutom-sidebar .custom-cats .cats-container > li > a {
-        color: #391540;
+        color: #80d3f8;
         text-decoration: none;
         display: inline-block;
         font-size: 17px;
@@ -2505,7 +2526,7 @@ body {
   overflow-x: hidden; }
 
 .dotted {
-  border-top: 6px dashed #391540; }
+  border-top: 6px dashed #80d3f8; }
 
 .disabled {
   cursor: not-allowed; }

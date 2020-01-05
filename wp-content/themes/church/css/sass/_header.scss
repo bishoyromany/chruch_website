@@ -25,6 +25,9 @@
             }
             .live_streaming_container{
                 width : 100%;
+                a{
+                    float: right;
+                }
                 .live_streaming{
                     max-height: 71px;
                     float: right;
@@ -153,7 +156,7 @@
     }
 
     a{
-        color : $nav-color !important;
+        color : $text-color !important;
         text-decoration: none;
         display : inline-block;
         &:hover{
@@ -185,6 +188,9 @@
         .menu-navbar-menu-container{
             display : inline-block;
         }
+        a{
+            font-weight : bold;
+        }
     }
 
     .social_links_pc , .social_links_phone{
@@ -210,6 +216,20 @@
         }
     }
 
+    .news_marquee{
+        background-color : #dbdbd9;
+        padding : 5px;
+        font-size : 1.1em;
+        font-weight : bold;
+        font-family: $font-family;
+        *{
+            font-weight : bold;
+            margin : 0px;
+            padding : 0px;
+        }
+    }
+
+
     .navbar_cats{
         list-style : none;
         margin : 0px;
@@ -224,10 +244,10 @@
                 font-size : 1.1em;
                 text-decoration : none;
                 &:hover{
-                    color : $border !important;
+                    color : $text-hover !important;
                 }
                 &.active_dropdown_nav_a{
-                    color : $border !important;
+                    color : $text-hover !important;
                     &:before{
                         content : '';
                         border-style : solid;
@@ -476,5 +496,13 @@
         width : 100%;
         padding : 0px;
         margin : 0px;
+    }
+    #pageContainer{
+        width : 90%;
+        margin : 0px auto;
+        -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
+        -moz-box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
+        box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
+
     }
 }

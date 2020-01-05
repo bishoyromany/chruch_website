@@ -11,8 +11,15 @@
 
     <?php wp_head(); ?>
 </head>
-<body>
-
+<body style="
+    background-color: #ffffff;
+    background-image: url(<?php echo get_template_directory_uri(); ?>/imgs/church/body_background.png);
+    background-position: center top;
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: fixed;
+">
+<diV id="pageContainer">
 <nav id="navbar">
     
     <div class="upper">
@@ -21,8 +28,8 @@
           <div class="logo_social">
                 <div class="row align-items-center">
                     <div class="col-md-6">
-                        <a class="logo" href="<?php bloginfo('url'); ?>"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/imgs/church/title.jpg" alt="Logo"></a>
-                        <a class="logo_phone" href="<?php bloginfo('url'); ?>"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/imgs/church/title.jpg" alt="Logo"></a>
+                        <a class="logo" href="<?php bloginfo('url'); ?>"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/imgs/church/title.png" alt="Logo"></a>
+                        <a class="logo_phone" href="<?php bloginfo('url'); ?>"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/imgs/church/title.png" alt="Logo"></a>
                     </div>
                     <div class="col-md-1"></div>
                     <div class="col-md-3">
@@ -30,7 +37,9 @@
                     </div>
                     <div class="col-md-2">
                         <div class="live_streaming_container">
-                            <img class="img-responsive live_streaming" src="<?php echo get_template_directory_uri(); ?>/imgs/church/live_streaming.jpg" alt="Live Streaming">
+                            <a href="http://live.saint-mary.net/">
+                                <img class="img-responsive live_streaming" src="<?php echo get_template_directory_uri(); ?>/imgs/church/live_streaming.png" alt="Live Streaming">
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -38,6 +47,24 @@
         </div>
     </div>
 
+
+
+
+    <!-- news -->
+    <?php 
+        /**
+         * get posts if exist
+         */
+        $args = array( 'numberposts' => 1 , 'order' => 'desc', 'category_name' => 'news-marquee' );
+        $posts = get_posts( $args );
+        if(count($posts) > 0):
+    ?>
+        <div class="news_marquee">
+            <?php foreach( $posts as $post ): setup_postdata($post); ?>
+                <marquee><?php echo $post->post_content ?></marquee>
+            <?php endforeach; ?>
+        </div>
+    <?php endif; ?>
 
     <div class="container navbar_container_fixed_zero">
     

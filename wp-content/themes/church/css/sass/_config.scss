@@ -1,5 +1,6 @@
 $page-color : rgb(255, 255, 255);
 $text-color : rgb(22, 21, 21);
+$text-hover : #1f289d;
 $nav-color : #FFF;
 $background : #FFF;
 $background-color :  #ffffff;
@@ -11,10 +12,11 @@ $cat_color : #30478C;
 $head : #444;
 $color : #222;
 $hover : #000;
-$border : #391540;
+$border : #80d3f8;
 $border_bottom : #db8289;
 $green_color : #9bbf95;
 $transition : all 0.5s ease-in-out;
+$font-family : 'lato-regular', sans-serif;
 // height config of second cat view
 $height_image : 200px;
 // pretty button with nice hover effect
@@ -71,7 +73,7 @@ $height_image : 200px;
     padding : 10px 10px 10px 0px;
     margin : 20px 0px 10px 0px;
     display : inline-block;
-    color : #391540;
+    color : #80d3f8;
     font-family : 'lato-bold' , 'sans-serif';
     font-weight : bold;
     img , svg{
