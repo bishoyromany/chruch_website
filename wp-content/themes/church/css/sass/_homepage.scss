@@ -188,10 +188,128 @@
     }
 }
 
+
+// recommended posts slider
+.recommended-posts-container-home{
+    padding-bottom : 20px;
+    background-color : $page-color;
+    .recommend-post , .recommend-post-single{
+        .post-rand-li{
+            padding : 0px;
+            height : auto;
+            & > div{
+                position: relative;
+                overflow : hidden;
+                height : auto;
+                width : 100%;
+                border-radius : 5px;
+            }
+
+
+            .img-container{
+                width : 100%;
+                height : auto;
+                img{
+                    transition: $transition;
+                    width : 100%;
+                    height: auto;
+                    z-index : 0;
+                    &:hover{
+                        transform: scale(1.05);
+                    }
+                }
+            }
+
+            .category{
+                font-size : 1em;
+                color : $nav-color;
+                border-radius : 15px;
+                padding : 10px 10px 5px;
+                transition : $transition;
+                text-decoration : none;
+                display : inline-block;
+            }
+
+            .header_ex{
+                background-color: rgba(0, 0, 0, 0.438);
+                position: absolute;
+                bottom: 0px;
+                height: 133px;
+                margin : 10px;
+                left: 0px;
+                width: 45%;
+                color : $nav-color;
+                transition : $transition;
+                font-family : $font-family;
+                overflow : hidden;
+                // border-bottom-right-radius: 35%;
+                &:hover{
+                    background : $slide_opacity_color;
+                    bottom: -5px;
+                    height: 240px;
+                    border-bottom-right-radius: 35%;
+                }
+                h3{
+                    margin : 0px;
+                    padding: 0px 10px 10px;
+                    font-size: 1.5em;
+                    line-height: 1.5em;
+                    font-weight : bold;
+                    z-index : 1;
+                    a{
+                        color : $nav-color;
+                        text-decoration: none;
+                    }
+                }
+
+                .excerpt{
+                    padding : 0px 10px 10px;
+                    font-size : 14px;
+                    line-height : 23px;
+                    z-index : 1;
+                    color : $nav-color;
+                    a{
+                        text-decoration : none;
+                        color : $nav-color;
+                        display : inline-block;
+                    }
+                    p{
+                        color : $nav-color;
+                    }
+                    span{
+                        color : $nav-color;
+                        display : block;
+                        text-decoration : underline;
+                        text-transform : uppercase;
+                    }
+                    // a{
+                    //     @extend %read_more;
+                    //     padding : 5px;
+                    //     display : inline-block;
+                    // }
+                }
+                
+            }
+
+            // the post info
+            .post-author , .post-date , .post-comments{
+                margin: 0px 0px 10px 5px;
+                display : inline-block;
+                z-index : 1;
+                a{
+                    color : $head;
+                }
+            }
+
+
+        }
+    }
+}
+
+
 // recommended posts slider
 .recommended-posts-container{
-    margin-bottom : 20px;
-    margin-top: 80px;
+    padding-bottom : 20px;
     background-color : $page-color;
     .slick-next, .slick-prev{
         display : none !important;
@@ -202,13 +320,13 @@
     .recommend-post , .recommend-post-single{
         .post-rand-li{
             padding : 0px;
-            height : 240px;
+            height : auto;
             // border-top-right-radius: 10px;
             // border-bottom-left-radius: 10px;
             & > div{
                 position: relative;
                 overflow : hidden;
-                height : 100%;
+                height : auto;
                 width : 100%;
                 border-radius : 5px;
                 // border-top-right-radius: 20px;
@@ -232,11 +350,11 @@
 
             .img-container{
                 width : 100%;
-                height : 100%;
+                height : auto;
                 img{
                     transition: $transition;
                     width : 100%;
-                    height: 100%;
+                    height: auto;
                     z-index : 0;
                     &:hover{
                         transform: scale(1.05);

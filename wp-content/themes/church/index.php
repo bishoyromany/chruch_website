@@ -18,7 +18,6 @@
         /**
          * get the Recommended posts for main page
          */
-        // require_once (get_template_directory() . "/parts/home/recommend_posts.php");
     ?>
     <div class="container">
         <div class="row">
@@ -30,9 +29,9 @@
             <div class="col-md-9 content_center">
                 <?php 
                     /**
-                     * pergenant section *week by week*
+                     * get the Recommended posts for main page
                      */
-                    // require_once (get_template_directory() . "/parts/home/week_by_week.php");
+                    require_once (get_template_directory() . "/parts/home/recommend_posts.php");
                 ?>          
                 <br>
                 <?php 

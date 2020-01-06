@@ -4,14 +4,14 @@
         'orderby'           => 'ID',
         'order'             => 'DESC',
         'tag'               => 'recommended',
-        'posts_per_page'    => 12
+        'posts_per_page'    => 1
     );
 
     $max_excerpt_words = 15;
 
     $recommended_posts = new WP_Query($recommended_posts_args); ?>
     <!-- the posts container div -->
-    <div class="recommended-posts-container" id="homeRecommended">
+    <div class="recommended-posts-container-home">
         
         <!-- <h2 class="recommend-head text-left">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.481 19.481" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 19.481 19.481">

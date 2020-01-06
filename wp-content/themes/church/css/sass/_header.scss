@@ -185,6 +185,9 @@
             top : 0px;
             // top : -100px;
         }
+        .container{
+            padding : 0px;
+        }
         .menu-navbar-menu-container{
             display : block;
         }
@@ -300,6 +303,11 @@
                 a{
                     color : #03a7f1 !important;
                     font-size : 1.2em;
+                }
+            }
+            &:first-of-type{
+                a{
+                    padding-left : 5px;
                 }
             }
         }

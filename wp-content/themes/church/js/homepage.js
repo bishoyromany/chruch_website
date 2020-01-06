@@ -9,15 +9,15 @@
         let numm = width > 991 ? 2 : 1;
 
         // recommended posts
-        $('.recommend-post').slick({
-            infinite: true,
-            slidesToShow: num,
-            slidesToScroll: num,
-            dots: false,
-            // fade: true,
-            autoplay : true,
-            arrows : true,
-        });
+        // $('.recommend-post').slick({
+        //     infinite: true,
+        //     slidesToShow: num,
+        //     slidesToScroll: num,
+        //     dots: false,
+        //     // fade: true,
+        //     autoplay : true,
+        //     arrows : true,
+        // });
 
         // single page random posts
         $(".recommend-post-single").slick({
