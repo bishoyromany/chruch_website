@@ -65,7 +65,8 @@
             <?php endforeach; ?>
         </div>
     <?php endif; ?>
-
+    
+    <!-- pages -->
     <div class="container navbar_container_fixed_zero">
     
       <!-- toggle button -->
@@ -108,7 +109,7 @@
       <div class="nav_links">
           <div class="container">
             <?php me_navbar_menu() ?>
-            <!-- social links -->
+            <!-- social links
             <div class="social_links_pc">
                 <a class="facebook" href="#" target="_blank">
                     <img class="img-responsive facebook_1" src="<?php echo get_template_directory_uri(); ?>/imgs/social/facebook_1.svg" alt="Facebook">
@@ -133,7 +134,7 @@
                     <img class="img-responsive whats_app_1" src="<?php echo get_template_directory_uri(); ?>/imgs/social/whats_app_1.svg" alt="Whats App">
                     <img class="img-responsive whats_app_0" src="<?php echo get_template_directory_uri(); ?>/imgs/social/whats_app.svg" alt="Whats App">
                 </a>
-            </div>
+            </div> -->
           </div>
       </div>
 

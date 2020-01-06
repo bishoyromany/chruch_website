@@ -186,7 +186,7 @@
             // top : -100px;
         }
         .menu-navbar-menu-container{
-            display : inline-block;
+            display : block;
         }
         a{
             font-weight : bold;
@@ -234,7 +234,7 @@
         list-style : none;
         margin : 0px;
         width : 100%;
-        display : inline-block;
+        display : block;
         &>li{
             display : inline-block;
             overflow : visible;
@@ -295,7 +295,16 @@
                     }
                 }
             }
+            &:last-of-type{
+                float : right;
+                a{
+                    color : #03a7f1 !important;
+                    font-size : 1.2em;
+                }
+            }
         }
+ 
+
     }
 }
 

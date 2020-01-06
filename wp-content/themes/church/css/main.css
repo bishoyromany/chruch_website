@@ -252,7 +252,7 @@
       position: fixed;
       top: 0px; }
     #navbar .nav_links .menu-navbar-menu-container {
-      display: inline-block; }
+      display: block; }
     #navbar .nav_links a {
       font-weight: bold; }
   #navbar .social_links_pc, #navbar .social_links_phone {
@@ -283,7 +283,7 @@
     list-style: none;
     margin: 0px;
     width: 100%;
-    display: inline-block; }
+    display: block; }
     #navbar .navbar_cats > li {
       display: inline-block;
       overflow: visible;
@@ -333,6 +333,11 @@
               padding: 5px 0px 5px; }
               #navbar .navbar_cats > li > ul > li ul li a {
                 color: #161515 !important; }
+      #navbar .navbar_cats > li:last-of-type {
+        float: right; }
+        #navbar .navbar_cats > li:last-of-type a {
+          color: #03a7f1 !important;
+          font-size: 1.2em; }
 
 /*
 ** Mobile Design
