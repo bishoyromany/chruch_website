@@ -57,6 +57,7 @@
     function me_custom_menu(){
         register_nav_menus(array(
             "navbar-menu" => 'navigation bar',
+            "pages-menu" => 'Pages Menu',
             'footer-menu' => 'Footer Menu'
         ));
     }
@@ -74,6 +75,14 @@
             'depth'           => 3 ,
         ));
     }
+    /* 
+    ** this function get pages Menu
+    ** wp_nav_menu();
+    */
+    function me_pages_menu(){
+        return wp_get_nav_menu_items('pages-menu');
+    }
+
     /**
      * this function get footer menu
      * wp_nav_menu()
@@ -204,3 +213,13 @@
         }
     }
     add_action('init', 'register_my_session');
+
+
+    /**
+     * dump data
+     */
+    function dd($data){
+        echo "<pre>";
+        var_dump($data);
+        echo "</pre>";
+    }

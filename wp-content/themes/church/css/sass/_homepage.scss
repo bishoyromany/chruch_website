@@ -196,11 +196,11 @@
     .recommend-post , .recommend-post-single{
         .post-rand-li{
             padding : 0px;
-            height : auto;
+            height : 550px;
             & > div{
                 position: relative;
                 overflow : hidden;
-                height : auto;
+                height : 100%;
                 width : 100%;
                 border-radius : 5px;
             }
@@ -208,11 +208,11 @@
 
             .img-container{
                 width : 100%;
-                height : auto;
+                height : 100%;
                 img{
                     transition: $transition;
                     width : 100%;
-                    height: auto;
+                    height: 100%;
                     z-index : 0;
                     &:hover{
                         transform: scale(1.05);
@@ -306,6 +306,54 @@
     }
 }
 
+// pages
+.pages-container-home{
+    padding : 5px;
+    &:nth-of-type(even){
+        .content{
+            background-color : $blue;
+        }
+    }
+    &:nth-of-type(odd){
+        .content{
+            background-color : $egg;
+        }  
+    }
+
+    .content{
+        display : block;
+        border-radius : 5px;
+        padding : 5px;
+        height : 173px;
+        margin-bottom : 5px;
+        overflow: hidden;
+        .img-container{
+            height: 100px;
+            display : block;
+            img{
+                height : 100%;
+                width : auto;
+            }
+        }
+
+        h3{
+            margin : 0px;
+            font-size : 1.3em;
+            font-family : $font-family;
+            a{
+                text-decoration: none;
+                color : $text-color;
+            }
+        }
+
+        p{
+            *{
+                margin : 0px;
+                padding : 0px;
+            }
+        }
+    }
+}
 
 // recommended posts slider
 .recommended-posts-container{
