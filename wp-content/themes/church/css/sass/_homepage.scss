@@ -307,7 +307,7 @@
 }
 
 // pages
-.pages-container-home{
+.pages-container-home , .pages-container-home-flex{
     padding : 5px;
     &:nth-of-type(even){
         .content{
@@ -319,41 +319,83 @@
             background-color : $egg;
         }  
     }
-
-    .content{
-        display : block;
-        border-radius : 5px;
-        padding : 5px;
-        height : 173px;
-        margin-bottom : 5px;
-        overflow: hidden;
-        .img-container{
-            height: 100px;
+    &.col-md-3{
+        .content{
             display : block;
-            img{
-                height : 100%;
-                width : auto;
+            border-radius : 5px;
+            padding : 5px;
+            height : 173px;
+            margin-bottom : 5px;
+            overflow: hidden;
+            .img-container{
+                height: 100px;
+                display : block;
+                img{
+                    height : 100%;
+                    width : auto;
+                }
             }
-        }
-
-        h3{
-            margin : 0px;
-            font-size : 1.3em;
-            font-family : $font-family;
-            a{
-                text-decoration: none;
-                color : $text-color;
-            }
-        }
-
-        p{
-            *{
+    
+            h3{
                 margin : 0px;
-                padding : 0px;
+                font-size : 1.3em;
+                font-weight: bold;
+                font-family : $font-family;
+                a{
+                    text-decoration: none;
+                    color : $text-color;
+                }
+            }
+    
+            p{
+                *{
+                    margin : 0px;
+                    padding : 0px;
+                }
+            }
+        }
+    }
+
+    &.move-left{
+        width : 140px;
+        float : left;
+        padding : 0px;
+        .content{
+            padding : 5px;
+            height : 150px;
+            margin-bottom : 5px;
+            overflow: hidden;
+            .img-container{
+                height: 80px;
+                display : block;
+                margin-bottom: 5px;
+                img{
+                    height : 100%;
+                    width : auto;
+                }
+            }
+    
+            h3{
+                margin : 0px;
+                font-size : 1.3em;
+                font-family : $font-family;
+                font-weight: bold;
+                a{
+                    text-decoration: none;
+                    color : $text-color;
+                }
+            }
+    
+            p{
+                *{
+                    margin : 0px;
+                    padding : 0px;
+                }
             }
         }
     }
 }
+
 
 // recommended posts slider
 .recommended-posts-container{

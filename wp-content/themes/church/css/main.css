@@ -108,6 +108,9 @@
   visibility: visible;
   opacity: 1; }
 
+.clear {
+  clear: both; }
+
 /*
 ** @Author : Bishoy Romany
 ** @Page   : header.php
@@ -830,35 +833,63 @@
       .recommended-posts-container-home .recommend-post .post-rand-li .post-author a, .recommended-posts-container-home .recommend-post .post-rand-li .post-date a, .recommended-posts-container-home .recommend-post .post-rand-li .post-comments a, .recommended-posts-container-home .recommend-post-single .post-rand-li .post-author a, .recommended-posts-container-home .recommend-post-single .post-rand-li .post-date a, .recommended-posts-container-home .recommend-post-single .post-rand-li .post-comments a {
         color: #444; }
 
-.pages-container-home {
+.pages-container-home, .pages-container-home-flex {
   padding: 5px; }
-  .pages-container-home:nth-of-type(even) .content {
+  .pages-container-home:nth-of-type(even) .content, .pages-container-home-flex:nth-of-type(even) .content {
     background-color: #80d3f8; }
-  .pages-container-home:nth-of-type(odd) .content {
+  .pages-container-home:nth-of-type(odd) .content, .pages-container-home-flex:nth-of-type(odd) .content {
     background-color: #edf4f7; }
-  .pages-container-home .content {
+  .pages-container-home.col-md-3 .content, .pages-container-home-flex.col-md-3 .content {
     display: block;
     border-radius: 5px;
     padding: 5px;
     height: 173px;
     margin-bottom: 5px;
     overflow: hidden; }
-    .pages-container-home .content .img-container {
+    .pages-container-home.col-md-3 .content .img-container, .pages-container-home-flex.col-md-3 .content .img-container {
       height: 100px;
       display: block; }
-      .pages-container-home .content .img-container img {
+      .pages-container-home.col-md-3 .content .img-container img, .pages-container-home-flex.col-md-3 .content .img-container img {
         height: 100%;
         width: auto; }
-    .pages-container-home .content h3 {
+    .pages-container-home.col-md-3 .content h3, .pages-container-home-flex.col-md-3 .content h3 {
       margin: 0px;
       font-size: 1.3em;
+      font-weight: bold;
       font-family: "lato-regular", sans-serif; }
-      .pages-container-home .content h3 a {
+      .pages-container-home.col-md-3 .content h3 a, .pages-container-home-flex.col-md-3 .content h3 a {
         text-decoration: none;
         color: #161515; }
-    .pages-container-home .content p * {
+    .pages-container-home.col-md-3 .content p *, .pages-container-home-flex.col-md-3 .content p * {
       margin: 0px;
       padding: 0px; }
+  .pages-container-home.move-left, .pages-container-home-flex.move-left {
+    width: 140px;
+    float: left;
+    padding: 0px; }
+    .pages-container-home.move-left .content, .pages-container-home-flex.move-left .content {
+      padding: 5px;
+      height: 150px;
+      margin-bottom: 5px;
+      overflow: hidden; }
+      .pages-container-home.move-left .content .img-container, .pages-container-home-flex.move-left .content .img-container {
+        height: 80px;
+        display: block;
+        margin-bottom: 5px; }
+        .pages-container-home.move-left .content .img-container img, .pages-container-home-flex.move-left .content .img-container img {
+          height: 100%;
+          width: auto; }
+      .pages-container-home.move-left .content h3, .pages-container-home-flex.move-left .content h3 {
+        margin: 0px;
+        font-size: 1.3em;
+        font-family: "lato-regular", sans-serif;
+        font-weight: bold; }
+        .pages-container-home.move-left .content h3 a, .pages-container-home-flex.move-left .content h3 a {
+          text-decoration: none;
+          color: #161515; }
+      .pages-container-home.move-left .content p *, .pages-container-home-flex.move-left .content p * {
+        margin: 0px;
+        padding: 0px; }
 
 .recommended-posts-container {
   padding-bottom: 20px;
