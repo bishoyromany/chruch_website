@@ -96,7 +96,33 @@
 
             <!-- up comding events -->
             <div class="upcoming-events pull-right">
-                Comming Events
+                <div class="header">
+                    <div class="text">
+                        Upcoming Events
+                    </div>
+                    <a class="more" href="<?php echo get_site_url(); ?>">
+                        More <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/imgs/church/arrow_right.svg" alt="More"></div>
+                    </a>
+                </div>
+
+                <div class="content">
+                    <ul class="list-unstyled">
+                        <?php 
+                            $events = Upcoming_Events_Lists_Event::get_events();
+                            foreach($events as $event){ ?>
+                                <li>
+                                    <div class="date">
+                                        <div class="month"><?php echo date('M' , $event->get_start_date()); ?></div>
+                                        <div class="day"><?php echo date('d' , $event->get_start_date()); ?></div>
+                                    </div>
+                                    <div class="text">
+                                        <div class="title"><?php echo $event->get_title() ?></div>
+                                        <div class="p"><?php echo $event->get_post()->post_content ?></div>
+                                    </div>
+                                </li>
+                        <?php } ?>
+                    </ul>
+                </div>
             </div>
 
 
