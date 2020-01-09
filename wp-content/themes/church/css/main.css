@@ -655,103 +655,6 @@
   width: 100%;
   background-color: white; }
 
-.homepage_slider {
-  list-style: none;
-  margin-top: 0px;
-  text-align: center; }
-  .homepage_slider li {
-    width: 100%; }
-    .homepage_slider li img {
-      width: 100%;
-      height: auto; }
-  .homepage_slider .slick-dots {
-    margin-top: 10px;
-    bottom: -35px; }
-  .homepage_slider .slick-slide {
-    outline: 0 !important; }
-
-.week_by_week {
-  margin-top: 30px;
-  width: 100%;
-  background-color: #f2f2f2;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  padding: 10px 5px 10px;
-  border: 1px solid #CCC; }
-  .week_by_week h4 {
-    color: #30478c;
-    margin: 0px;
-    padding: 0px; }
-  .week_by_week h1 {
-    margin: 5px;
-    padding: 0px;
-    color: #391540;
-    font-family: lato-bold , 'sans-serif';
-    font-weight: bold;
-    transition: all 0.5s ease-in-out; }
-    .week_by_week h1:hover {
-      color: #52659e; }
-  .week_by_week span {
-    font-size: 1.4em;
-    display: inline-block; }
-    .week_by_week span.green {
-      color: #9bbf95; }
-    .week_by_week span.blue {
-      color: #30478c; }
-    .week_by_week span.block {
-      display: block; }
-  .week_by_week form {
-    margin-top: 40px;
-    margin-bottom: 15px; }
-    .week_by_week form .col-md-5 {
-      padding: 0px; }
-    .week_by_week form .date input {
-      padding: 10px;
-      outline: 0;
-      border: none;
-      background-color: #cccccc;
-      margin: 0px;
-      width: 61px; }
-      .week_by_week form .date input:nth-of-type(2) {
-        border-left: 1px solid #DDD;
-        border-right: 1px solid #DDD; }
-      .week_by_week form .date input:nth-of-type(1) {
-        border-bottom-left-radius: 10px; }
-      .week_by_week form .date input:nth-of-type(3) {
-        border-top-right-radius: 10px; }
-    .week_by_week form .email {
-      width: 95%; }
-      .week_by_week form .email input {
-        width: 100%;
-        padding: 10px 30px 10px  10px;
-        background-color: #cccccc;
-        outline: 0;
-        border: none;
-        border-top-right-radius: 10px;
-        border-bottom-left-radius: 10px; }
-    .week_by_week form button {
-      position: absolute;
-      right: 8%;
-      top: 0px;
-      border: none;
-      outline: 0;
-      padding: 9px;
-      background-color: #391540;
-      border-top-right-radius: 10px; }
-      .week_by_week form button img {
-        width: 20px;
-        transition: all 0.5s ease-in-out; }
-        .week_by_week form button img:hover {
-          transform: rotate(90deg); }
-  .week_by_week .health {
-    margin-left: 10%; }
-    .week_by_week .health span {
-      color: #391540 !important;
-      font-size: 2em; }
-  .week_by_week .icon img {
-    margin: 0px auto;
-    width: 80%; }
-
 .recommended-posts-container-home {
   padding-bottom: 20px;
   background-color: white; }
@@ -774,7 +677,7 @@
         z-index: 0; }
         .recommended-posts-container-home .recommend-post .post-rand-li .img-container img:hover, .recommended-posts-container-home .recommend-post-single .post-rand-li .img-container img:hover {
           transform: scale(1.05); }
-    .recommended-posts-container-home .recommend-post .post-rand-li .category, .recommended-posts-container-home .recommend-post-single .post-rand-li .category {
+    .recommended-posts-container-home .recommend-post .post-rand-li .tags a, .recommended-posts-container-home .recommend-post-single .post-rand-li .tags a {
       font-size: 1em;
       color: #FFF;
       border-radius: 15px;
@@ -1030,6 +933,71 @@
       .upcoming-events .content ul li .text .p {
         font-weight: lighter;
         opacity: 0.8; }
+
+.latest-sermons-home {
+  clear: left;
+  width: CALC(100% - 322px);
+  background-color: #fafafa;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 30px; }
+  .latest-sermons-home .header {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 10px;
+    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 10px;
+    width: 100%; }
+    .latest-sermons-home .header .text {
+      flex: 4;
+      text-transform: uppercase;
+      color: #161515;
+      font-size: 1.1em; }
+    .latest-sermons-home .header .more {
+      text-align: right;
+      flex: 1;
+      text-decoration: none;
+      color: #161515;
+      opacity: 0.7; }
+      .latest-sermons-home .header .more .img-container {
+        width: 14px;
+        display: inline-block; }
+  .latest-sermons-home .content ul {
+    display: flex;
+    flex-direction: row; }
+    .latest-sermons-home .content ul li {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 15px;
+      max-width: 49%;
+      margin-right: 10px;
+      border: 1px solid #DDD;
+      align-items: center; }
+      .latest-sermons-home .content ul li .img-container {
+        flex: 1;
+        text-align: center;
+        margin-right: 10px; }
+        .latest-sermons-home .content ul li .img-container a {
+          display: inline-block;
+          padding: 10px;
+          margin: 0px auto; }
+      .latest-sermons-home .content ul li .text {
+        flex: 1; }
+        .latest-sermons-home .content ul li .text .title {
+          text-transform: uppercase;
+          text-decoration: none; }
+          .latest-sermons-home .content ul li .text .title a {
+            font-size: 17px;
+            color: #161515; }
+          .latest-sermons-home .content ul li .text .title .date {
+            opacity: 0.8;
+            font-size: 13px; }
+        .latest-sermons-home .content ul li .text .p {
+          font-weight: lighter;
+          opacity: 0.8; }
+          .latest-sermons-home .content ul li .text .p p {
+            margin-bottom: 2.5px; }
 
 .cat-container {
   margin-bottom: 20px !important;

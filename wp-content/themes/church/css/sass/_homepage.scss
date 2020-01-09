@@ -17,178 +17,6 @@
 }
 
 
-// homepage slider design 
-.slider_fixed{
-    // position : fixed;
-    // top : 0px;
-    // left : 0px;
-    // height : 400px;
-    // width : 100%;
-}
-
-.slider_fake{
-    // height : 300px;
-    // width : 100%;
-}
-
-.homepage_slider{
-    list-style : none;
-    margin-top : 0px;
-    text-align : center;
-
-    li {
-        width : 100%;
-        div{
-            // -webkit-background-size: cover;
-            // -moz-background-size: cover;
-            // -o-background-size: cover;
-            // background-size: cover;
-            // height : 100%;
-            // height : 100%;
-        }
-        img{
-            // border-top-right-radius: 33px;
-            // border-bottom-left-radius: 33px;
-            width : 100%;
-            height : auto;
-        }
-    }
-
-    .slick-dots{
-        margin-top : 10px;
-        bottom: -35px;
-        // background-color:$slide_opacity_color ;
-        // display: inline-block !important;
-        // width: auto;
-        // margin: 0px auto;
-        // padding: 10px 10px 12px;
-        // border-radius: 50px;
-        // vertical-align: top;
-        // bottom: 15px !important;
-        // left : 45% !important;
-    }
-
-    .slick-slide{
-        outline : 0 !important;
-    }
-}
-
-// week by week design
-.week_by_week{
-    margin-top : 30px;
-    width : 100%;
-    background-color : #f2f2f2;
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    padding : 10px 5px 10px;
-    border : 1px solid #CCC;
-    h4{
-        color : #30478c;
-        margin : 0px;
-        padding : 0px;
-    }
-    h1{
-        margin : 5px;
-        padding : 0px;
-        color : #391540;
-        font-family :lato-bold , 'sans-serif';
-        font-weight : bold; 
-        transition: $transition;
-        &:hover{
-            color : #52659e;
-        }
-    }
-    span{
-        font-size : 1.4em;
-        display : inline-block;
-        &.green{
-            color : #9bbf95;
-        }
-        &.blue{
-            color : #30478c;
-        }
-        &.block{
-            display : block;
-        }
-    }
-
-    form{
-        margin-top : 40px;
-        margin-bottom : 15px;
-        .col-md-5{
-            padding : 0px;
-        }
-        .date{
-            input{
-                padding : 10px; 
-                outline : 0;
-                border : none;
-                background-color : #cccccc;
-                margin : 0px;
-                width : 61px;
-                &:nth-of-type(2){
-                    border-left : 1px solid #DDD;
-                    border-right : 1px solid #DDD;
-                }
-                &:nth-of-type(1){
-                    border-bottom-left-radius: 10px;
-                }
-                &:nth-of-type(3){
-                    border-top-right-radius: 10px;
-                }
-            }
-        }
-
-        .email{
-            width : 95%;
-            input{
-                width : 100%;
-                padding :10px 30px 10px  10px;
-                background-color : #cccccc;
-                outline : 0;
-                border : none;
-                border-top-right-radius: 10px;
-                border-bottom-left-radius: 10px;
-            }
-        }
-
-
-        button{
-            position : absolute;
-            right : 8%;
-            top : 0px;
-            border : none;
-            outline : 0;
-            padding : 9px;
-            background-color : #391540;
-            border-top-right-radius: 10px;
-            img{
-                width : 20px;
-                transition : $transition;
-                &:hover{
-                    transform: rotate(90deg);
-                }
-            }
-        }
-    }
-    
-    .health{
-        margin-left : 10%;
-        span{
-            color:#391540 !important;
-            font-size : 2em;
-        }
-    }
-
-    .icon{
-        img{
-            margin: 0px auto;
-            width: 80%;
-        }
-    }
-}
-
-
 // recommended posts slider
 .recommended-posts-container-home{
     padding-bottom : 20px;
@@ -220,14 +48,16 @@
                 }
             }
 
-            .category{
-                font-size : 1em;
-                color : $nav-color;
-                border-radius : 15px;
-                padding : 10px 10px 5px;
-                transition : $transition;
-                text-decoration : none;
-                display : inline-block;
+            .tags{
+                a{
+                    font-size : 1em;
+                    color : $nav-color;
+                    border-radius : 15px;
+                    padding : 10px 10px 5px;
+                    transition : $transition;
+                    text-decoration : none;
+                    display : inline-block;
+                }
             }
 
             .header_ex{
@@ -592,6 +422,93 @@
                     .p{
                         font-weight: lighter;
                         opacity : 0.8;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// latest sermons
+.latest-sermons-home{
+    clear: left;
+    width: CALC(100% - 322px);
+    background-color : #fafafa;
+    border-radius : 10px;
+    padding : 5px;
+    margin-bottom : 30px;
+    .header{
+        display : flex;
+        flex-direction: row;
+        padding : 10px 10px;
+        border-bottom : 1px solid #eaeaea;
+        margin-bottom : 10px;
+        width: 100%;
+        .text{
+            flex: 4;
+            text-transform: uppercase;
+            color : $text-color;
+            font-size : 1.1em;
+        }
+        .more{
+            text-align : right;
+            flex : 1;
+            text-decoration : none;
+            color : $text-color;
+            // float : right;
+            opacity : 0.7;
+            .img-container{
+                width: 14px;
+                display : inline-block;
+            }
+        }
+    }
+
+    .content{
+        ul{
+            display : flex;
+            flex-direction: row;
+            li{
+                flex : 1;
+                display : flex;
+                flex-direction : row;
+                margin-bottom : 15px;
+                max-width: 49%;
+                margin-right : 10px;
+                border : 1px solid #DDD;
+                align-items: center;
+                .img-container{
+                    flex : 1;
+                    text-align : center;
+                    margin-right: 10px;
+                    a{
+                        display : inline-block;
+                        padding : 10px;
+                        margin : 0px auto;
+                    }
+                }
+                .text{
+                    flex : 1;
+                    .title{
+                        text-transform: uppercase;
+                        text-decoration : none;
+                        a{
+                            font-size : 17px;
+                            color : $text-color;
+                        }
+                        .date{
+                            opacity : 0.8;
+                            font-size : 13px;
+                        }
+                    }
+                    .p{
+                        font-weight: lighter;
+                        opacity : 0.8;
+                        p{
+                            margin-bottom : 2.5px;
+                        }
                     }
                 }
             }

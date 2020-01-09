@@ -126,6 +126,69 @@
             </div>
 
 
+            <!-- Latest Sermons -->
+            <div class="latest-sermons-home">
+                <div class="header">
+                    <div class="text">
+                        Latest Sermons
+                    </div>
+                    <a class="more" href="<?php echo get_site_url(); ?>">
+                        More <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/imgs/church/arrow_right.svg" alt="More"></div>
+                    </a>
+                </div>
+
+                <div class="content">
+                    <ul class="list-unstyled">
+                        <?php 
+                            $sermons_args = array(
+                                'orderby'           => 'ID',
+                                'order'             => 'DESC',
+                                'category_name'     => 'sermons',
+                                'posts_per_page'    => 2
+                            );
+                            $sermons = new WP_Query($sermons_args);
+
+                            if($sermons->have_posts()): // check if there are posts 
+                                // posts counter
+                                $x = 0; 
+                                // echo the posts
+                                while($sermons->have_posts()): $sermons->the_post(); $x += 1; 
+                                    ?>
+                                    <li>
+                                        <div class="img-container">
+                                            <a href="<?php the_permalink(); ?>">
+                                                <?php the_post_thumbnail('' , array(
+                                                    'class' => 'img-responsive' , 
+                                                    'title' => 'Post Image'
+                                                )); ?>
+                                            </a>
+                                        </div>
+                                        <div class="text">
+                                            <h3 class="title">
+                                                <a href="<?php the_permalink();// link of the post ?>">
+                                                    <?php the_title(); // title of the post?>
+                                                </a>
+                                                <div class="date"><?php echo get_the_date( 'M d,Y' ); ?></div>
+                                            </h3>
+                                            <div class="p"><?php 
+                                                $p = [];
+                                                $findH1s = preg_match_all('/<p ?.*>(.*)<\/p>/i', get_the_content(), $p);
+                                                foreach($p[0] as $t){
+                                                    echo $t;
+                                                }
+                                            ?></div>
+                                        </div>
+                                    </li>
+                                <?php endwhile; 
+                                wp_reset_postdata(); // rest all values 
+                            endif; 
+                        ?>
+                    </ul>
+                </div>
+            </div>
+
+
+
             <!-- right sidebar -->
             <div class="col-md-3 sidebar_data">
                 <?php //get_sidebar(); ?>

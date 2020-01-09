@@ -1,9 +1,11 @@
 <?php 
     $recommended_posts_args = array(
-        'post_type'         => 'post',
+        // 'post_type'         => 'post',
         'orderby'           => 'ID',
         'order'             => 'DESC',
-        'tag'               => 'recommended',
+        'category_name'     => 'articles',
+        // 'tag'               => 'recommended',
+        // 'category__not_in ' => $category__not_in,
         'posts_per_page'    => 1
     );
 
@@ -45,15 +47,13 @@
 
                             <div class="header_ex">
                                 <!-- category -->
-                                <?php 
-                                    $cat = get_the_category();
-                                    if(count($cat) > 0){
-                                        $name = $cat[0]->name;
-                                        $id = $cat[0]->term_id;
-                                        $link = get_category_link($id);
+                                <div class="tags">
+                                    <?php 
+                                        if(has_tag()):
+                                            the_tags('' , ' ' , '');
+                                        endif;    
                                     ?>
-                                    <a class="category" href="<?php echo $link ?>"><?php echo $name ?></a>
-                                <?php } ?>
+                                </div>
 
                                 <!-- post title -->
                                 <h3 class="post-title">
