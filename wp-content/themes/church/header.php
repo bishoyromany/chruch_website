@@ -53,6 +53,11 @@
     <!-- news -->
     <?php 
         /**
+         * store prev post
+         */
+        global $prevPostData;
+        $prevPostData = $post;
+        /**
          * get posts if exist
          */
         $args = array( 'numberposts' => 1 , 'order' => 'desc', 'category_name' => 'news-marquee' );
@@ -60,8 +65,8 @@
         if(count($posts) > 0):
     ?>
         <div class="news_marquee">
-            <?php foreach( $posts as $post ): setup_postdata($post); ?>
-                <marquee><?php echo $post->post_content ?></marquee>
+            <?php foreach( $posts as $ps ): ?>
+                <marquee><?php echo $ps->post_content ?></marquee>
             <?php endforeach; ?>
         </div>
     <?php endif; ?>

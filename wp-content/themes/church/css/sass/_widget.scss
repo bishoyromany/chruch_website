@@ -506,6 +506,8 @@
     // border : 1px solid #CCC;
     position : relative;
     margin-top : 35px;
+    background-color: #FFF;
+    padding : 5px;
     &:before{
         content: '';
         border-width: 1px;
@@ -517,7 +519,7 @@
         height: 100%;
     }
     .box{
-        color : #391540;
+        color : #47bff5;
         margin-bottom : 20px;
         h3{
             color : $border;
@@ -570,7 +572,7 @@
                     border : none;
                     outline : 0;
                     padding : 9px;
-                    background-color : #391540;
+                    background-color : #47bff5;
                     border-top-right-radius: 10px;
                     img{
                         width : 20px;
@@ -586,7 +588,7 @@
         h2{
             margin: 0px;
             font-weight: bold;
-            color: #391540;
+            color: #47bff5;
             text-transform: uppercase;
             font-size: 1.3em;
             padding-bottom: 15px;
@@ -596,7 +598,7 @@
     // patreon 
     .patreon{
         a{
-            background-color : #391540;
+            background-color : #47bff5;
             display : flex;
             padding : 10px;
             align-items: center;
@@ -703,7 +705,7 @@
                     font-size : 16px;
                     overflow : hidden;
                     line-height : 18px;
-                    background-color : #391540cc;
+                    background-color : #47bff5cc;
                     margin : 0px;
                     padding : 10px;
                     position: absolute;
@@ -776,7 +778,7 @@
             padding:10px;
             border-bottom-left-radius: 20px;
             border-top-right-radius: 20px;
-            background-color : #391540;
+            background-color : #47bff5;
         }
         h3{
             margin-top : 0px;

@@ -1,28 +1,12 @@
 <div class="cutom-sidebar cutom">
     <?php $directory_uri = get_template_directory_uri(); ?>
 
-    <!-- free book -->
-    <div class="box free_book">
-        <img src="<?php echo $directory_uri ?>/imgs/book/book.png" class="img-responsive" alt="Book">
-        <div class="form">
-            <form  action="/subscribe-news-letters-pergenancy" method="post">
-                <div class="data">
-                    <input type="email" name="email" placeholder="Write Your Email">
-                    <input type="hidden" name="get_free_book" value="yes">
-                    <button>
-                        <img src="<?php echo $directory_uri ?>/imgs/book/book_heart.svg" alt="Supmit">
-                    </button>
-                </div>
-            </form>
-            <h2 class="text-center">Get It Now For Free</h2>
-        </div>
-    </div>
 
     <!-- patreon -->
     <div class="box patreon">
         <a href="#" target="_blank">
             <h2>
-                <span class="white">Support Us</span>
+                <span class="white">Donate Us</span>
                 <span class="orange">On Patreon</span>
             </h2>
 
@@ -37,24 +21,17 @@
 
     </div>
 
-    <!-- chat -->
-    <div class="box chat">
-        <h3>
-            <img src="<?php echo get_template_directory_uri(); ?>/imgs/chat/chat.svg" alt="Chat" /><span>Chat</span>
-        </h3>
-        <div class="chat_container"></div>
-    </div>
-
     <!-- recent posts -->
     <div class="box recent">
         <h3>
-            <img src="<?php echo get_template_directory_uri(); ?>/imgs/posts/star.svg" alt="Star" /><span>Recent Posts</span>
+            <img src="<?php echo get_template_directory_uri(); ?>/imgs/posts/star.svg" alt="Star" /><span>Recent Articles</span>
         </h3>
         <div class="post-container">
             <?php
 
                 $recent_posts_args = array(
                     'post_type'             => 'post',
+                    'category_name'             => 'articles',
                     'posts_per_page'        => 5     ,
                     'post_status'           => 'publish',
                     'orderby'               => 'ID',
@@ -118,7 +95,7 @@
     </div>
 
     <!-- you may like posts -->
-    <div class="box recent">
+    <!-- <div class="box recent">
         <h3>
             <img src="<?php echo get_template_directory_uri(); ?>/imgs/posts/heart.svg" alt="Heart" /><span>You May Like</span>
         </h3>
@@ -185,7 +162,7 @@
 
             <div class="fix"></div>
         </div>    
-    </div>
+    </div> -->
 
     <!-- hottest post -->
     <div class="hottest-post box">
@@ -194,6 +171,7 @@
             <?php 
                 $hottest_post_args = array(
                     'post_type'     => 'post' , 
+                    'category_name' => 'articles',
                     'posts_per_page'=> 1 , 
                     'orderby'       => 'comment_count' , 
                     'order'         => 'DESC'

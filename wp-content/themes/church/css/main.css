@@ -813,7 +813,7 @@
     .recommended-posts-container .recommend-post .post-rand-li .category, .recommended-posts-container .recommend-post-single .post-rand-li .category {
       font-size: 1em;
       color: #FFF;
-      background-color: #30478C;
+      background-color: #47bff5;
       margin: 16px 0px 0px 16px;
       top: 16px;
       left: 16px;
@@ -1361,7 +1361,7 @@
     transition: all 0.5s ease-in-out; }
     #singlePost .single-post .post-edit-link:hover {
       text-decoration: none;
-      background-color: #391540; }
+      background-color: #47bff5; }
     #singlePost .single-post .post-edit-link svg {
       color: #FFF; }
   #singlePost .single-post .post-title {
@@ -1371,7 +1371,7 @@
     font-family: lato-bold , 'sans-serif'; }
     #singlePost .single-post .post-title a {
       text-decoration: none;
-      color: #391540; }
+      color: #47bff5; }
   #singlePost .single-post .post-author, #singlePost .single-post .post-date, #singlePost .single-post .post-comments {
     margin-left: 15px;
     margin-bottom: 15px;
@@ -1427,7 +1427,7 @@
     #singlePost .single-post .copy button {
       padding: 7.5px;
       color: #FFF;
-      background-color: #391540;
+      background-color: #47bff5;
       border: none; }
   #singlePost .single-post .img-container {
     max-height: 450px;
@@ -1553,7 +1553,7 @@
     background: #ffffff; }
   #singlePost .single-post .post-tags a {
     color: #FFF !important;
-    background-color: #391540; }
+    background-color: #47bff5; }
   #singlePost .single-post .post-tags .post-no-tags {
     color: red;
     font-weight: 700;
@@ -1577,7 +1577,7 @@
   margin: 20px 0px 10px;
   font-weight: bold;
   font-family: lato-bold , 'arial' , 'sana-serif';
-  color: #391540; }
+  color: #47bff5; }
 #singlePost .next-prev-posts-single ol {
   margin-left: 20px;
   margin-bottom: 15px;
@@ -1695,7 +1695,9 @@
 ** and the replies form and comment form
 **/
 .comments-section {
-  width: 100%; }
+  width: 100%;
+  background-color: #FFF;
+  padding: 10px; }
   .comments-section .comemnts-title {
     margin: 20px 0px 10px; }
   .comments-section .comment-awaiting-moderation {
@@ -1761,15 +1763,15 @@
           position: absolute;
           display: inline-block;
           font-size: 0.9em;
-          color: #391540;
+          color: #47bff5;
           border-radius: 10px;
           padding: 10px 20px; }
           .comments-section .comment-container-main .comment .comment-body .comment-meta a {
-            color: #391540;
+            color: #47bff5;
             text-decoration: none; }
           .comments-section .comment-container-main .comment .comment-body .comment-meta .comment-edit-link {
             display: inline-block;
-            background-color: #391540;
+            background-color: #47bff5;
             color: white;
             padding: 10px 20px;
             border-radius: 10px;
@@ -1779,14 +1781,14 @@
             font-size: 1em; }
             .comments-section .comment-container-main .comment .comment-body .comment-meta .comment-edit-link:hover {
               background-color: #ffffff;
-              color: #391540; }
+              color: #47bff5; }
         .comments-section .comment-container-main .comment .comment-body .reply {
           right: 40px;
           bottom: 5px;
           position: absolute; }
           .comments-section .comment-container-main .comment .comment-body .reply a {
             display: inline-block;
-            background-color: #391540;
+            background-color: #47bff5;
             color: white;
             padding: 10px 20px;
             border-radius: 10px;
@@ -1796,7 +1798,7 @@
             .comments-section .comment-container-main .comment .comment-body .reply a:hover {
               padding: 10px 30px;
               background-color: #ffffff;
-              color: #391540; }
+              color: #47bff5; }
   .comments-section .comment-container-main > .comment {
     list-style: none;
     color: #000;
@@ -1817,13 +1819,13 @@
     background-color: #FFF; }
     .comments-section .comment-respond .comment-reply-title {
       padding: 20px 0px;
-      color: #391540;
+      color: #47bff5;
       font-weight: bold;
       font-family: lato-bold , 'sans-serif';
       text-align: left; }
       .comments-section .comment-respond .comment-reply-title a {
         text-decoration: none;
-        color: #391540;
+        color: #47bff5;
         font-weight: bold;
         font-family: lato-bold , 'sans-serif'; }
     .comments-section .comment-respond .comment-form {
@@ -1836,7 +1838,7 @@
       background-color: white;
       border-radius: 10px; }
     .comments-section .comment-respond .form-submit #submit {
-      background-color: #391540;
+      background-color: #47bff5;
       color: #FFF;
       outline: 0; }
     .comments-section .comment-respond .comment-form-author, .comments-section .comment-respond .comment-form-email {
@@ -1878,7 +1880,7 @@
       padding: 10px 10px; }
       .comments-section .comment-container-main .comment .comment-body .comment-meta .comment-edit-link {
         background-color: transparent;
-        color: #391540;
+        color: #47bff5;
         padding: 0px; }
         .comments-section .comment-container-main .comment .comment-body .comment-meta .comment-edit-link:hover {
           background-color: transparent; }
@@ -1906,13 +1908,13 @@
     background-color: #FFF; }
     .comments-section .comment-respond .comment-reply-title {
       padding: 20px 0px;
-      color: #391540;
+      color: #47bff5;
       font-weight: bold;
       font-family: lato-bold , 'sans-serif';
       text-align: left; }
       .comments-section .comment-respond .comment-reply-title a {
         text-decoration: none;
-        color: #391540;
+        color: #47bff5;
         font-weight: bold;
         font-family: lato-bold , 'sans-serif'; }
     .comments-section .comment-respond .comment-form {
@@ -1925,7 +1927,7 @@
       background-color: white;
       border-radius: 10px; }
     .comments-section .comment-respond .form-submit #submit {
-      background-color: #391540;
+      background-color: #47bff5;
       color: #FFF;
       outline: 0; }
     .comments-section .comment-respond .comment-form-author, .comments-section .comment-respond .comment-form-email {
@@ -2024,7 +2026,9 @@
 
 .cutom-sidebar {
   position: relative;
-  margin-top: 35px; }
+  margin-top: 35px;
+  background-color: #FFF;
+  padding: 5px; }
   .cutom-sidebar:before {
     content: '';
     border-width: 1px;
@@ -2035,7 +2039,7 @@
     top: 0px;
     height: 100%; }
   .cutom-sidebar .box {
-    color: #391540;
+    color: #47bff5;
     margin-bottom: 20px; }
     .cutom-sidebar .box h3 {
       color: #80d3f8;
@@ -2079,7 +2083,7 @@
           border: none;
           outline: 0;
           padding: 9px;
-          background-color: #391540;
+          background-color: #47bff5;
           border-top-right-radius: 10px; }
           .cutom-sidebar .free_book form .data button img {
             width: 20px;
@@ -2089,12 +2093,12 @@
     .cutom-sidebar .free_book h2 {
       margin: 0px;
       font-weight: bold;
-      color: #391540;
+      color: #47bff5;
       text-transform: uppercase;
       font-size: 1.3em;
       padding-bottom: 15px; }
   .cutom-sidebar .patreon a {
-    background-color: #391540;
+    background-color: #47bff5;
     display: flex;
     padding: 10px;
     align-items: center; }
@@ -2169,7 +2173,7 @@
       font-size: 16px;
       overflow: hidden;
       line-height: 18px;
-      background-color: #391540cc;
+      background-color: #47bff5cc;
       margin: 0px;
       padding: 10px;
       position: absolute;
@@ -2224,7 +2228,7 @@
     padding: 10px;
     border-bottom-left-radius: 20px;
     border-top-right-radius: 20px;
-    background-color: #391540; }
+    background-color: #47bff5; }
   .cutom-sidebar .custom-cats h3 {
     margin-top: 0px;
     color: #FFF !important; }
@@ -2264,7 +2268,7 @@
           padding: 5px 0px;
           transition: all 0.5s ease-in-out; }
           .cutom-sidebar .custom-cats .cats-container > li .children li a {
-            color: #30478C;
+            color: #47bff5;
             text-decoration: none; }
         .cutom-sidebar .custom-cats .cats-container > li .children .current-cat {
           background-color: green;

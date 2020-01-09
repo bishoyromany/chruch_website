@@ -6,6 +6,10 @@
 ?>
 <div class="single-post-header">
     <?php 
+        $args = array(
+            'post__in' => [$prevPostData->ID],
+        );
+        $posts = get_posts($args);
         /**
          * require the header
          */
@@ -50,7 +54,7 @@
                 /*
                  ** get the random posts section 
                 */
-                require_once (get_template_directory() . '/parts/single/random_posts.php');    
+                //require_once (get_template_directory() . '/parts/single/random_posts.php');    
             ?>
         </div>
 
