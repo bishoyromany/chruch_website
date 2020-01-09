@@ -88,10 +88,11 @@
      * wp_nav_menu()
      */
     function me_footer_menu(){
+        return wp_get_nav_menu_items('footer-menu');
         wp_nav_menu(array(
             'theme_location'    => 'footer-menu',
             'menu_class'        => 'footer-menu',
-            'depth'             => 2
+            'depth'             => 1
         ));
     }
     /*

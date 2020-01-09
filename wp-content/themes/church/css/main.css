@@ -2479,54 +2479,12 @@
         margin-left: 25px;
         margin-top: 5px; }
 
-#chat {
-  bottom: 0px;
-  right: 15px;
-  position: fixed;
-  z-index: 100000; }
-  #chat .chat_box {
-    transition: all 0.5s ease-in-out;
-    background-color: #ffffff;
-    width: 0px;
-    height: 0px;
-    max-width: calc(100vw - 15px); }
-    #chat .chat_box.show_chat_box {
-      height: 400px;
-      width: 400px; }
-  #chat .chat_picker {
-    padding: 15px 20px;
-    border-top-right-radius: 30px;
-    border-top-left-radius: 30px;
-    background-color: #391540;
-    display: flex;
-    width: 250px;
-    align-items: center;
-    transition: all 0.5s ease-in-out;
-    max-width: calc(100vw - 15px);
-    cursor: pointer; }
-    #chat .chat_picker .chat_icon {
-      flex: 2; }
-    #chat .chat_picker .text {
-      margin-left: 10px;
-      flex: 8;
-      color: #FFF;
-      font-size: 1.3em; }
-    #chat .chat_picker .chat_arrow {
-      flex: 1;
-      transition: all 0.5s ease-in-out; }
-    #chat .chat_picker.shown_chat_box {
-      width: 400px; }
-      #chat .chat_picker.shown_chat_box .text {
-        flex: 15; }
-      #chat .chat_picker.shown_chat_box .chat_arrow {
-        transform: rotate(180deg); }
-
 #backToTop {
   width: 50px;
   height: 50px;
   padding: 10px;
   border-radius: 50%;
-  background-color: #ffffff;
+  background: #47bff5;
   position: fixed;
   bottom: -80px;
   z-index: 1000;
@@ -2539,105 +2497,48 @@
     width: 100%; }
 
 .footer {
-  background: #391540;
+  background: #47bff5;
   width: 100%;
   padding: 20px 10px 50px;
   z-index: 100000;
-  border-top: #db8289;
   position: relative;
   z-index: 2; }
-  .footer .footer_logo {
-    text-align: center; }
-    .footer .footer_logo h3 {
-      margin: 0px;
-      color: #FFF;
-      text-transform: uppercase; }
-    .footer .footer_logo .logo {
-      width: 70%;
-      margin: 20px auto; }
-    .footer .footer_logo .social {
-      text-align: center;
-      padding: 5px 10px;
-      background-color: #FFF;
-      border-radius: 20px;
+  .footer .items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 5%; }
+  .footer .logo {
+    max-width: 60px;
+    margin: 0px 20px; }
+  .footer .donate {
+    margin-right: 15px; }
+    .footer .donate a {
       display: inline-block;
-      margin-bottom: 10px; }
-      .footer .footer_logo .social a {
-        display: inline-block;
-        margin: 0px 2.5px;
-        vertical-align: middle; }
-      .footer .footer_logo .social .facebook_1, .footer .footer_logo .social .youtube_1, .footer .footer_logo .social .instagram_1, .footer .footer_logo .social .patreon_1, .footer .footer_logo .social .whats_app_1 {
-        display: none; }
-      .footer .footer_logo .social a {
-        margin-left: 10px; }
-        .footer .footer_logo .social a:hover .facebook_1, .footer .footer_logo .social a:hover .youtube_1, .footer .footer_logo .social a:hover .instagram_1, .footer .footer_logo .social a:hover .patreon_1, .footer .footer_logo .social a:hover .whats_app_1 {
-          display: block !important; }
-        .footer .footer_logo .social a:hover .facebook_0, .footer .footer_logo .social a:hover .youtube_0, .footer .footer_logo .social a:hover .instagram_0, .footer .footer_logo .social a:hover .patreon_0, .footer .footer_logo .social a:hover .whats_app_0 {
-          display: none !important; }
-        .footer .footer_logo .social a img {
-          width: 25px; }
-      .footer .footer_logo .social .facebook_1 img, .footer .footer_logo .social .facebook_0 img, .footer .footer_logo .social .instagram_1 img, .footer .footer_logo .social .instagram_0 img, .footer .footer_logo .social .youtube_1 img, .footer .footer_logo .social .youtube_0 img {
-        width: 25px; }
-    .footer .footer_logo .email {
-      margin-top: 10px; }
-      .footer .footer_logo .email a {
-        color: #FFF;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-size: 1.1em; }
-  .footer .week_by_week_footer {
-    text-align: center;
-    height: 193px;
-    display: inline-block;
-    width: 100%; }
-    .footer .week_by_week_footer p, .footer .week_by_week_footer h2 {
+      font-weight: bold;
       color: #FFF;
-      margin: 0px;
-      text-decoration: none; }
-    .footer .week_by_week_footer .img-responsive {
-      margin: 0px auto;
-      width: 115px !important; }
-  .footer .copy_rights, .footer .copy_rights_phone {
-    margin-top: 15px;
-    color: #FFF;
-    font-size: 1em;
-    text-transform: uppercase;
-    text-align: center; }
-  .footer .copy_rights_phone {
-    display: none; }
-  .footer .links {
-    text-align: center; }
-    .footer .links ul li {
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 5px;
+      background-color: #1f289d;
+      font-size: 1.7em; }
+  .footer .item {
+    margin: 0px 10px; }
+    .footer .item a {
       display: inline-block;
-      margin: 0px 10px 10px; }
-      .footer .links ul li a {
-        color: #FFF;
-        text-transform: uppercase;
-        text-decoration: none; }
-  .footer .contact form .clas1 {
-    padding-right: 5px; }
-  .footer .contact form .clas2 {
-    padding-left: 5px; }
-  .footer .contact form textarea {
-    width: 100%;
-    height: 150px;
-    resize: none;
-    padding: 7.5px 10px;
-    border-radius: 10px;
-    border: none;
-    outline: 0; }
-  .footer .contact form input {
-    margin: 5px 0px;
-    width: 100%;
-    padding: 7.5px 10px;
-    border-radius: 10px;
-    border: none;
-    outline: 0; }
-    .footer .contact form input:nth-of-type(1) {
-      margin: 0px 0px 5px !important; }
-  .footer .contact form .submit {
-    background-color: #f2b6bb;
-    color: #391540; }
+      font-weight: bold;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 5px;
+      color: #1f289d;
+      font-size: 1.3em; }
+  .footer .social {
+    margin-left: 10px;
+    display: flex; }
+    .footer .social img {
+      width: 30px;
+      margin: 10px; }
 
 /*
 ** Mobile Design
