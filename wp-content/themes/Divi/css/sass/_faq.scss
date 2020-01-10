@@ -1,0 +1,35 @@
+/*
+** @Author : Bishoy Romany
+** @Page   : page-faq.php
+** @version: 1.0.0
+** This Style For faq page only
+*/
+.faq{
+    h1{
+        margin-bottom : 20px;
+    }
+    .faq-quest{
+        padding : 0px;
+        .question-container{
+            margin-bottom : 10px;
+            background-color : $box-background;
+            .question{
+                font-size : 18px;
+                background : $background-hover;
+                color : #000;
+                padding : 10px;
+                cursor : pointer;
+            }
+            .answer{
+                font-size : 16px;
+                padding : 10px;
+                display : none;
+                ol,ul{
+                    margin-left : 25px;
+                    margin-top : 5px;
+                }
+            }
+
+        }
+    }
+}

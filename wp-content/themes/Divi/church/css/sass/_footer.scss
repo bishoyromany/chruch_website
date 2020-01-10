@@ -1,0 +1,112 @@
+// back to up 
+#backToTop{
+    width : 50px;
+    height : 50px;
+    padding : 10px;
+    border-radius : 50%;
+    background: #47bff5;
+    position : fixed;
+    bottom : -80px;
+    z-index : 1000;
+    left : 10px;
+    cursor: pointer;
+    transition :$transition;
+    &.show_back_to_top{
+        bottom : 40px !important;
+    }
+    img{
+        width : 100%;
+    }
+}
+
+// footer style
+.footer{
+    background: #47bff5;
+    width : 100%;
+    padding : 20px 10px 50px;
+    z-index: 100000;
+    position: relative;
+    z-index : 2;
+    .items{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding : 0px 5%;
+    }
+    .logo{
+        max-width: 60px;
+        margin: 0px 20px;
+    }
+    .donate{
+        margin-right: 15px;
+        a{
+            display : inline-block;
+            font-weight: bold;
+            color : #FFF;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding : 5px;
+            background-color:#1f289d;
+            font-size : 1.7em;
+        }
+    }
+    .item{
+        margin: 0px 10px;
+        a{
+            display : inline-block;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding : 5px;
+            color:#1f289d;
+            font-size : 1.3em;
+        }
+    }
+    .social{
+        margin-left : 10px;
+        display: flex;
+        img{
+            width : 30px;
+            margin : 10px;
+        }
+    }
+}
+
+
+
+
+/*
+** Mobile Design
+*/
+@media (max-width: 991px) { 
+    .footer{
+        padding : 20px 10px 80px;
+        .footer_logo{
+            margin-bottom : 10px;
+            .logo{
+                width : 100%;
+            }
+        }
+    
+        .copy_rights{
+            display : none;
+        }
+
+        .copy_rights_phone{
+            display : block !important;
+            text-align : center;
+        }
+
+        .contact{
+            form{
+                .clas1{
+                    padding : 0px 15px !important;
+                }
+                .clas2{
+                    padding : 0px 15px !important;
+                }
+            }
+        }
+    }
+}

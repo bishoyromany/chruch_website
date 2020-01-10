@@ -1,0 +1,204 @@
+/*
+** @Author : Bishoy Romany
+** @Page : author.php
+** @version: 1.0.0
+** This style only for author page
+*/
+// author page container
+.author-page{
+    // author full info
+    .author-info{
+        position: fixed;
+        background-color : $box-background;
+        height : 100%;
+        border-radius: 20px;
+        transition : $transition;
+        left: 30px;
+        .author-name{
+            margin-top : 10px;
+            margin-bottom : 20px;
+            .author-img{
+                margin-bottom : 20px;            
+            }
+        }
+        // author meta
+        .author-meta{
+            li{
+                padding : 10px ;
+                font-size: 18px;
+                border-radius: 10px;
+                margin : 2px;
+                transition : $transition;
+                background: $background-color;
+                &:hover{
+                    background: $background-hover;
+                }
+            }
+        }
+    }
+    // author posts container
+    .author-posts{
+        text-align : center;
+        // author posts header
+        .posts-head{
+            display : inline-block;
+            @extend %nice_header;
+        }
+        // post container
+        .main-post{
+            text-align : left;
+            background-color : $box-background;
+            padding: 20px 20px 0px;
+            border : 1px solid $border;
+            margin-bottom : 30px;
+            border : $border;
+            border-radius : 10px;
+            min-height : 570px;
+            max-height : 570px;
+            overflow : hidden;
+            // post title
+            .post-title{
+                margin : 0 0 10px;
+                font-size : 20px;
+                font-weight : bold;
+                color : $head;
+                letter-spacing: -1;
+                a{
+                    color : $head;
+                    &:hover{
+                        color : $head;
+                        text-decoration : none;
+                    }
+                }
+            }
+            // post info
+            .post-author,.post-date , .post-comments{
+                font-size : 12px;
+                margin : 5px;
+                a{
+                    color : #333;
+                    text-decoration : none;
+                    &:hover{
+                        color : #333;
+                        text-decoration : none;
+                    }
+                }
+            }
+            .comment-url{
+                color : red;
+            }
+            // img container
+            .img-container{
+                height : 200px;
+                margin : 10px 0;
+                overflow : hidden;
+                img{
+                    display : block ;
+                    height : 200px;
+                    width : 100%;
+                    transition : $transition;
+                    &:hover{
+                        transform : scale(1.1);
+                    }
+                }
+            }
+            // post excerpt
+            .post-summery{
+                line-height : 1.7em ;
+                color : $head;
+                height : 102px;
+                overflow : hidden;
+                p{
+                    a{
+                        color : $color;
+                        @extend %read_more;
+                    }
+                }
+            }
+            svg , i{
+                color : $head;
+            }
+            .post-coategories{
+                position: relative;
+                padding-left : 35px;
+                svg{
+                    position : absolute;
+                    top : 10px;
+                    left : 5px;
+                }
+                a{
+                    background-color : skyblue;
+                    @extend %nice_buttons;
+                    &:hover{
+                        background-color : rgb(199, 238, 253);
+                    }
+                }
+            }
+            // tags
+            .post-tags{
+                margin : -5px 0px 5px;
+                padding-bottom : 10px;
+                position : relative;
+                &:before{
+                    font-family: 'Font Awesome 5 Free';
+                    content: 'Tags :';
+                    position: absolute;
+                    top: -6px;
+                    left: -12px;
+                    background-color: #FFF;
+                    padding: 13px;
+                    display: inline-block;
+                }
+                a{
+                    background : $background-color;
+                    @extend %nice_buttons;
+                }
+                .post-no-tags{
+                    display :block;
+                    margin-left: 55px;
+                    padding : 10px 30px 10px 10px;
+                    background-color : rgba(255, 0, 0, 0.452);
+                    color : #FFF;
+                    border-left : 7px solid black;
+                }
+            }
+        }
+    }
+    // author comments
+    .author-comments-section{
+        text-align : center;
+        // comments hidder
+        h2{
+            display : inline-block;
+            @extend %nice_header;
+        }
+        // comments container
+        .comment{
+            text-align : left;
+            background-color : #FFF;
+            padding : 10px;
+            border-radius : 10px;
+            margin : 10px;
+            .post{
+                margin-bottom : 5px;
+                a{
+                    color : #333;
+                    font-size : 23px;
+                    text-decoration: none;
+                }
+            }
+    
+            .date{
+                font-size : 14px;
+                margin-left : 10px;
+            }
+            .content{
+                border : 1px solid #CCC;
+                border-radius : 10px;
+                padding : 10px;
+                font-size : 20px;
+                margin-top : 10px;
+            }
+        }
+    }
+}

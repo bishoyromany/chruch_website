@@ -1,0 +1,455 @@
+/**
+** here is all comments style 
+** and the replies form and comment form
+**/
+
+// start comments section
+.comments-section{
+    width : 100%;
+    background-color  :#FFF;
+    padding : 10px;
+    // main style
+    .comemnts-title{
+        @extend %nice_header;
+        margin : 20px 0px 10px;
+    }
+
+    .comment-awaiting-moderation{
+        display : none;
+    }
+
+    .children{
+        padding : 0px 10px;
+    }
+
+    // main comments style
+    .comment-container-main {
+        padding : 0px;
+        & > .comment{
+            border: 1px solid #CCC;
+            border-top-right-radius : 10px;
+            border-bottom-left-radius : 10px;
+        }
+        .comment{
+            list-style: none;
+            margin-top : 5px;
+            color : #000;
+            padding : 0px;
+            .comment-body{
+                // border : 1px solid #DDD;
+                padding : 10px 10px 20px 10px;
+                border-top-right-radius : 10px;
+                border-bottom-left-radius : 10px;
+                position: relative;
+                //  comments author
+                .comment-author{
+                    display : none;
+                    width: 20%;
+                    padding: 5px;
+                    margin: 0px;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    border-radius: 10px;
+                    display: inline-block;
+                    text-align: center;
+                    img{
+                        border-radius : 50%;
+                        width : 60px;
+                        height : 60px;
+                    }
+                    .fn{
+                        display: block;
+                        a{
+                            color : #333;
+                            text-decoration : none;
+                            &:hover{
+                                text-decoration : none;
+                            }
+                        }
+                    } 
+                    .says{
+                        display : none;
+                    }
+                }
+
+                // the comment words
+                p{
+                    padding: 20px 10px;
+                    color: #333;
+                    border: 1px solid #CCC;
+                    min-height: 50px;
+                    background-color: rgb(255, 255, 255);
+                    width: 82%;
+                    margin-left: 18%;
+                    margin-top: 0px;
+                    position: relative;
+                    margin-bottom: 50px;
+                    border-top-right-radius : 10px;
+                    border-bottom-left-radius : 10px;
+                    // &::before{
+                    //     content: "\f064";
+                    //     font-family: "Font Awesome 5 Free";
+                    //     font-weight: 900;
+                    //     text-decoration: inherit;
+                    //     color: #cac9c9;
+                    //     font-size: 30px;
+                    //     padding-right: 0.5em;
+                    //     position: absolute;
+                    //     top: -3px;
+                    //     left: -30px;
+                    // }
+                }
+
+
+                // comment time
+                .comment-meta{
+                    left : 40px;
+                    bottom: 5px;
+                    position : absolute;
+                    display : inline-block;
+                    // background-color : #47bff5;
+                    font-size : 0.9em;
+                    color : #47bff5;
+                    border-radius : 10px;
+                    padding : 10px 20px;
+                    a{
+                        color : #47bff5;
+                        // color : rgb(255, 255, 255);
+                        text-decoration : none;
+                    }
+
+                    .comment-edit-link{
+                        display : inline-block;
+                        background-color : #47bff5;
+                        color : rgb(255, 255, 255);
+                        padding : 10px 20px;
+                        border-radius : 10px;
+                        transition : all 0.5s ease-in-out;
+                        clear: both;
+                        text-decoration : none;
+                        font-size : 1em;
+                        &:hover{
+                            background-color : $background-color;
+                            color : #47bff5;
+                        }
+                    }
+                }
+
+                // reply button
+                .reply{
+                    right : 40px;
+                    bottom: 5px;
+                    position : absolute;
+                    a{
+                        display : inline-block;
+                        background-color : #47bff5;
+                        color : rgb(255, 255, 255);
+                        padding : 10px 20px;
+                        border-radius : 10px;
+                        transition : all 0.5s ease-in-out;
+                        clear: both;
+                        text-decoration : none;
+                        &:hover{
+                            padding : 10px 30px;
+                            background-color : $background-color;
+                            color : #47bff5;
+                        }
+                    }
+                } 
+    
+                
+            }
+        }
+        // for the comment author
+        // .bypostauthor{
+        //     border : 2px solid green;
+        //     .comment-author{
+        //         .fn{
+        //             &:after{
+        //                 font-family: "Font Awesome 5 Free"; 
+        //                 font-weight: 900;
+        //                 content : " \f00c";
+        //                 color : green;
+        //                 font-size : 20px;
+        //                 transition : $transition;
+        //             }
+        //             &:hover:after{
+        //                 content : "Author";
+        //                 font-family: Tahoma;
+        //             }
+        //         }
+        //     }
+        // }
+    }
+
+    // level 1 comments tyle
+    .comment-container-main > .comment{
+        list-style: none;
+        color : #000;
+        margin-top : 10px;
+        background-color : #FFF;
+        padding : 10px;
+    }
+
+    // level 2 comments style
+    .comment-container-main .children > .comment > .comment-body{
+        background-color : rgb(255, 255, 255);
+        margin-top : 0px;
+        // border : 1px solid #BBB;
+    }
+
+    // level 3 comments style
+    .comment-container-main .children > .comment > .children > .comment > .comment-body{
+        background-color : rgb(255, 255, 255);
+        margin-top : 0px;
+        // border : 1px solid #BBB;
+    }
+
+    // level 4 comments style
+    .comment-container-main .children > .comment > .children > .comment > .children > .comment > .comment-body{
+        background-color : rgb(255, 255, 255);
+        margin-top : 0px;
+        // border : 1px solid #BBB;
+    }
+
+    // reply and answer comments
+    .comment-respond{
+        margin-bottom : 20px;
+        background-color : #FFF;
+        .comment-reply-title{
+            padding : 20px 0px;
+            color : #47bff5;
+            font-weight : bold;
+            font-family : lato-bold , 'sans-serif';
+            text-align : left;
+            a{
+                text-decoration: none;
+                color : #47bff5;
+                font-weight : bold;
+                font-family : lato-bold , 'sans-serif';
+            }
+        }
+        .comment-form{
+            padding : 10px;
+        }
+        .comment-form-comment{
+            textarea{
+                width : 100%;
+                border : 1px solid #CCC;
+                resize: none;
+                padding : 10px;
+                background-color : rgb(255, 255, 255);
+                border-radius : 10px;
+            }
+        }
+
+        .form-submit{
+            #submit{
+                background-color : #47bff5;
+                color : #FFF;
+                outline : 0;
+            }
+        }
+
+        .comment-form-author , .comment-form-email{
+            margin-bottom : 30px;
+            label{
+                position: absolute;
+                top: 6px;
+                left: 25px;
+                opacity: 0.7;
+                transition : $transition;
+                &.hide_label{
+                    top : -25px;
+                }
+            }
+        }
+
+        .comment-form-cookies-consent{
+            clear : both;
+            input{
+                vertical-align: top;
+                margin-right: 10px;
+                margin-top: 3px;
+            }
+        }
+    }
+
+}
+
+
+@media screen and(max-width : 991px){
+   // start comments section
+    .comments-section{
+
+        // main comments style
+        .comment-container-main {
+            padding : 0px;
+            .comment{
+                .comment-body{
+                    //  comments author
+                    .comment-author{
+                        top: 0px;
+                        img{
+                            border-radius : 50%;
+                            width : 40px;
+                            height : 40px;
+                        }
+                        .fn{
+                            word-break: break-all;
+                            font-size : 12px;
+                            height: 40px;
+                            overflow: hidden;
+                        } 
+                    }
+
+                    // the comment words
+                    p{
+                        width: 85%;
+                        margin-left: 19%;
+                    }
+
+                    // comment time
+                    .comment-meta{
+                        left : 0px;
+                        padding : 10px 10px;
+                        .comment-edit-link{
+                            background-color : transparent;
+                            color : #47bff5;
+                            padding : 0px;
+                            &:hover{
+                                background-color : transparent;
+                            }
+                        }
+                    }
+                    // reply button
+                    .reply{
+                        right : 0px;
+                        a{
+                            &:hover{
+                                padding : 10px;
+                            }
+                        }
+                    } 
+        
+                    
+                }
+            }
+            // for the comment author
+            // .bypostauthor{
+            //     border : 2px solid green;
+            //     .comment-author{
+            //         .fn{
+            //             &:after{
+            //                 font-family: "Font Awesome 5 Free"; 
+            //                 font-weight: 900;
+            //                 content : " \f00c";
+            //                 color : green;
+            //                 font-size : 20px;
+            //                 transition : $transition;
+            //             }
+            //             &:hover:after{
+            //                 content : "Author";
+            //                 font-family: Tahoma;
+            //             }
+            //         }
+            //     }
+            // }
+        }
+
+        // level 1 comments tyle
+        .comment-container-main > .comment{
+            list-style: none;
+            color : #000;
+            margin-top : 10px;
+            background-color : #FFF;
+            padding : 10px;
+        }
+
+        // level 2 comments style
+        .comment-container-main .children > .comment > .comment-body{
+            background-color : rgb(255, 255, 255);
+            margin-top : 0px;
+            // border : 1px solid #BBB;
+        }
+
+        // level 3 comments style
+        .comment-container-main .children > .comment > .children > .comment > .comment-body{
+            background-color : rgb(255, 255, 255);
+            margin-top : 0px;
+            // border : 1px solid #BBB;
+        }
+
+        // level 4 comments style
+        .comment-container-main .children > .comment > .children > .comment > .children > .comment > .comment-body{
+            background-color : rgb(255, 255, 255);
+            margin-top : 0px;
+            // border : 1px solid #BBB;
+        }
+
+        // reply and answer comments
+        .comment-respond{
+            margin-bottom : 20px;
+            background-color : #FFF;
+            .comment-reply-title{
+                padding : 20px 0px;
+                color : #47bff5;
+                font-weight : bold;
+                font-family : lato-bold , 'sans-serif';
+                text-align : left;
+                a{
+                    text-decoration: none;
+                    color : #47bff5;
+                    font-weight : bold;
+                    font-family : lato-bold , 'sans-serif';
+                }
+            }
+            .comment-form{
+                padding : 10px;
+            }
+            .comment-form-comment{
+                textarea{
+                    width : 100%;
+                    border : 1px solid #CCC;
+                    resize: none;
+                    padding : 10px;
+                    background-color : rgb(255, 255, 255);
+                    border-radius : 10px;
+                }
+            }
+
+            .form-submit{
+                #submit{
+                    background-color : #47bff5;
+                    color : #FFF;
+                    outline : 0;
+                }
+            }
+
+            .comment-form-author , .comment-form-email{
+                margin-bottom : 30px;
+                label{
+                    position: absolute;
+                    top: 6px;
+                    left: 25px;
+                    opacity: 0.7;
+                    transition : $transition;
+                    &.hide_label{
+                        top : -25px;
+                    }
+                }
+            }
+
+            .comment-form-cookies-consent{
+                clear : both;
+                input{
+                    vertical-align: top;
+                    margin-right: 10px;
+                    margin-top: 3px;
+                }
+            }
+        }
+
+    } 
+}

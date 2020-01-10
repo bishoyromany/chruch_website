@@ -1,0 +1,41 @@
+/*
+** @Author : Bishoy Romany
+** @Page : author.php
+** @version: 1.0.0
+** This style only for author page
+*/
+
+.search-container{
+    .search{
+        padding : 0px;  
+        margin : 20px 0px 50px 0px;
+        form{
+            div{
+                div{
+                    text-align : center;
+                    input{
+                        background : #FFF;
+                        padding : 15px 135px 15px 20px;
+                        font-size : 18px;
+                        border-top-left-radius: 30px;
+                        border-bottom-left-radius: 30px;
+                    }
+                }
+                .button-search{
+                    background : $background-color;
+                    color : #000;
+                    border : none;
+                    padding : 8px;
+                    position : absolute;
+                    right : 0px;
+                    border-top-right-radius: 30px;
+                    border-bottom-right-radius: 30px;
+                    outline : 0;
+                    &:hover{
+                        background : $background-color;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,6 +1,6 @@
 <?php
     // get bootstrap nav walker
-    require_once __DIR__."/assists/wp-bootstrap-navwalker.php";
+    // require_once __DIR__."/assists/wp-bootstrap-navwalker.php";
     /*
     ** get all custom css style function
     ** wp_enqueue_style('name' , get_template_directory_uri() , depends on array , versoin , head or bottom);
