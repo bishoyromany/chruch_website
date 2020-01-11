@@ -19,7 +19,7 @@
     background-repeat: repeat;
     background-attachment: fixed;
 ">
-<diV id="pageContainer">
+<diV id="pageContainer" style="background-color:#FFF;">
 <nav id="navbar">
     
     <div class="upper">
@@ -47,16 +47,18 @@
         </div>
     </div>
 
+    <?php 
+    $page_title = $wp_query->post->post_title;
+    
+    ?>
 
-
-
+    <?php if($page_title != 'My Calendar'): ?>
     <!-- news -->
     <?php 
         /**
          * store prev post
          */
-        global $prevPostData;
-        $prevPostData = $post;
+        global $post;
         /**
          * get posts if exist
          */
@@ -69,7 +71,7 @@
                 <marquee><?php echo $ps->post_content ?></marquee>
             <?php endforeach; ?>
         </div>
-    <?php endif; ?>
+    <?php endif; endif; ?>
     
     <!-- pages -->
     <div class="container navbar_container_fixed_zero">
@@ -113,38 +115,14 @@
       <!-- nav links -->
       <div class="nav_links">
           <div class="container">
-            <?php me_navbar_menu() ?>
-            <!-- social links
-            <div class="social_links_pc">
-                <a class="facebook" href="#" target="_blank">
-                    <img class="img-responsive facebook_1" src="<?php echo get_template_directory_uri(); ?>/imgs/social/facebook_1.svg" alt="Facebook">
-                    <img class="img-responsive facebook_0" src="<?php echo get_template_directory_uri(); ?>/imgs/social/facebook.svg" alt="Facebook">
-                </a>
-                
-                <a class="instagram" href="#" target="_blank">
-                    <img class="img-responsive instagram_1" src="<?php echo get_template_directory_uri(); ?>/imgs/social/instagram_1.svg" alt="Instagram">
-                    <img class="img-responsive instagram_0" src="<?php echo get_template_directory_uri(); ?>/imgs/social/instagram.svg" alt="Instagram">
-                </a>
-
-                <a class="youtube" href="#" target="_blank">
-                    <img class="img-responsive youtube_1" src="<?php echo get_template_directory_uri(); ?>/imgs/social/youtube_1.svg" alt="Youtube">
-                    <img class="img-responsive youtube_0" src="<?php echo get_template_directory_uri(); ?>/imgs/social/youtube.svg" alt="Youtube">
-                </a>
-
-                <a class="patreon" href="#" target="_blank">
-                    <img class="img-responsive patreon_1" src="<?php echo get_template_directory_uri(); ?>/imgs/social/patreon_1.svg" alt="Patreon">
-                    <img class="img-responsive patreon_0" src="<?php echo get_template_directory_uri(); ?>/imgs/social/patreon.svg" alt="Patreon">
-                </a>
-                <a class="whats_app" href="#" target="_blank">
-                    <img class="img-responsive whats_app_1" src="<?php echo get_template_directory_uri(); ?>/imgs/social/whats_app_1.svg" alt="Whats App">
-                    <img class="img-responsive whats_app_0" src="<?php echo get_template_directory_uri(); ?>/imgs/social/whats_app.svg" alt="Whats App">
-                </a>
-            </div> -->
+            <?php me_navbar_menu();?>
           </div>
       </div>
 
   </div>
 </nav>
+
+<?php wp_reset_postdata(); ?>
 
 
 

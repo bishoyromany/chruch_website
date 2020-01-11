@@ -6,10 +6,10 @@
 ?>
 <div class="single-post-header">
     <?php 
-        $args = array(
-            'post__in' => [$prevPostData->ID],
-        );
-        $posts = get_posts($args);
+        // $args = array(
+        //     'post__in' => [$prevPostData->ID],
+        // );
+        // $posts = get_posts($args);
         /**
          * require the header
          */

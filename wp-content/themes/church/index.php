@@ -13,6 +13,7 @@
     // require_once (get_template_directory() . "/parts/home/images_slider.php");
 ?>
 
+
 <div class="cotainer_all_data">
     <?php 
         /**
