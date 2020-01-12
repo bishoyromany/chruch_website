@@ -15,7 +15,25 @@
     ?>
     <div class="container-fluid">
         <div class="row">
-            <section class="section_1 section">
+            <div class="section">
+                <?php  $pagename = get_query_var('pagename'); 
+                    $args=array('posts_per_page'=>5, 'tag' => $pagename , 'category_name' => 'pages');
+                    $wp_query = new WP_Query( $args );
+
+                    while($wp_query->have_posts()):
+                        $wp_query->the_post();
+                        the_content();
+                    endwhile;
+
+                    wp_reset_postdata();
+                ?>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- <section class="section_1 section">
                 <h2 class="pretty_header first">Blessed is egypt my people (Isaiah 19:25)</h2>
                 <div class="row">
                     <div class="col-md-7">
@@ -125,10 +143,8 @@
                 <h2 class="pretty_header">CONCLUSION</h2>
                 <p>The blessings of God, granted to Egypt thousands of years ago, were and still are the source of flourishing, that nourishes the life of the Copts, from generation to generation, and throughout the ages to come.</p>
                 <p>Glory to GOD forever amen.</p>
-            </section>
-        </div>
-    </div>
-</div>
+            </section> -->
+
 
 <!-- end all posts container -->
 <?php

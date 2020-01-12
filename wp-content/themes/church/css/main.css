@@ -2657,10 +2657,32 @@ body {
   width: 90%;
   margin: 0px auto;
   display: block; }
-  .section h2 {
-    margin: 20px 0px 50px; }
-  .section .first {
+  .section h2, .section h1 {
+    margin: 20px 0px 50px;
+    font-family: 'BebasNeue-Regular',Helvetica,Arial,Lucida,sans-serif;
+    color: #1f289d;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background: 0 0;
+    vertical-align: baseline;
+    text-shadow: 0em 0.1em 0.1em rgba(0, 0, 0, 0.4);
+    font-weight: bold;
+    font-style: normal;
+    text-transform: none;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 31px; }
+  .section .wp-block-media-text__content {
+    padding-left: 0px; }
+  .section h2:first-of-type {
     margin: 80px 0px 50px; }
+  .section hr {
+    margin: 30px 0px;
+    height: 1px;
+    display: inline-block;
+    width: 100%;
+    background-color: #47bff5; }
   .section p {
     vertical-align: baseline;
     line-height: 1.7em;
@@ -2668,9 +2690,11 @@ body {
     margin-bottom: 30px; }
   .section img {
     width: 100%; }
-  .section .sub_header {
-    margin-bottom: 40px;
-    color: #0C71C3 !important;
-    text-shadow: 0em 0.1em 0.1em rgba(0, 0, 0, 0.4); }
+  .section .sub {
+    padding-left: 30px; }
+    .section .sub h2, .section .sub h1 {
+      margin-bottom: 40px;
+      color: #0C71C3 !important;
+      text-shadow: 0em 0.1em 0.1em rgba(0, 0, 0, 0.4); }
 
 /*# sourceMappingURL=main.css.map */
