@@ -25,27 +25,5 @@
 @import "_footer";     // import the footer file 
 
 @import "_404";     // import the footer file 
-/* 
-** main rules
-*/
-body{
-    background-color : $page-color;
-    color : $color;
-    min-height : 200vh;
-    overflow-x : hidden;
-}
-h1 , h2 , h3 , h4 , h5{
-    // font-family: 'pretty-head' , sans-serif;
-    // a , span{
-    //     font-family: 'pretty-head' , sans-serif;
-    // }
-}
-.dotted{
-    border-top : 6px dashed $border;
-}
-.disabled{
-    cursor: not-allowed;
-}
-.fix {
-    clear : both;
-}
+
+@import "_about_our_church";     // import about our church file
